@@ -38,7 +38,7 @@ export function ArticleFilters() {
   const t = useTranslations('articles');
   const locale = useLocale();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isTagsOpen, setIsTagsOpen] = useState(false);
 
@@ -52,7 +52,7 @@ export function ArticleFilters() {
 
   const clearFilters = () => {
     setSearchTerm('');
-    setSelectedCategory('');
+    setSelectedCategory('all');
     setSelectedTags([]);
   };
 
@@ -64,7 +64,7 @@ export function ArticleFilters() {
     );
   };
 
-  const hasActiveFilters = searchTerm || selectedCategory || selectedTags.length > 0;
+  const hasActiveFilters = searchTerm || (selectedCategory !== 'all') || selectedTags.length > 0;
 
   return (
     <div className="bg-muted/20 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-border/50">
@@ -93,7 +93,7 @@ export function ArticleFilters() {
                 <SelectValue placeholder={t('allCategories')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">{t('allCategories')}</SelectItem>
+                <SelectItem value="all">{t('allCategories')}</SelectItem>
                 {categories.map((category) => (
                   <SelectItem key={category.id} value={category.slug}>
                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
@@ -191,14 +191,14 @@ export function ArticleFilters() {
                 </button>
               </Badge>
             )}
-            {selectedCategory && (
+            {selectedCategory !== 'all' && (
               <Badge
                 variant="secondary"
                 className="bg-bright-yellow/10 text-bright-yellow-dark border-bright-yellow/20"
               >
                 {categories.find(c => c.slug === selectedCategory)?.name}
                 <button
-                  onClick={() => setSelectedCategory('')}
+                  onClick={() => setSelectedCategory('all')}
                   className="ml-2 rtl:ml-0 rtl:mr-2 hover:text-bright-yellow-dark/80"
                 >
                   <X className="w-3 h-3" />
