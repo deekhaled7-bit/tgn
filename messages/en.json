@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "articles": "Articles",
+    "theGoodProject": "The Good Project",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "search": "Search articles...",
+    "subscribe": "Subscribe"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to The Good News",
+      "subtitle": "Discover stories that matter, insights that inspire",
+      "cta": "Explore Articles"
+    },
+    "features": {
+      "title": "Why Choose The Good News?",
+      "exclusive": {
+        "title": "Exclusive Content",
+        "description": "Access premium articles and videos in The Good Project"
+      },
+      "community": {
+        "title": "Vibrant Community",
+        "description": "Join thousands of readers sharing positive stories"
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Content available in English and Arabic"
+      }
+    }
+  },
+  "articles": {
+    "title": "Latest Articles",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "byAuthor": "By {author}",
+    "noArticles": "No articles found",
+    "searchPlaceholder": "Search articles..."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access exclusive content",
+      "email": "Email",
+      "password": "Password",
+      "button": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up here"
+    },
+    "signup": {
+      "title": "Join The Good News",
+      "subtitle": "Create your account to get started",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "button": "Create Account",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in here"
+    }
+  },
+  "subscription": {
+    "title": "Choose Your Plan",
+    "subtitle": "Unlock exclusive content and support quality journalism",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save 20%",
+    "features": {
+      "articles": "Access to exclusive articles",
+      "videos": "Premium video content",
+      "community": "Community access",
+      "support": "Priority support"
+    },
+    "subscribe": "Subscribe Now",
+    "current": "Current Plan"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "subscription": {
+      "title": "Subscription",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "plan": "Plan",
+      "renewsOn": "Renews on",
+      "manage": "Manage Subscription"
+    },
+    "account": {
+      "title": "Account Settings",
+      "email": "Email",
+      "name": "Name",
+      "language": "Language",
+      "theme": "Theme",
+      "save": "Save Changes"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
