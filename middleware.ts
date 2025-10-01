@@ -1,11 +1,11 @@
-import createMiddleware from 'next-intl/middleware';
-import { withAuth } from 'next-auth/middleware';
-import { locales } from './i18n';
+import createMiddleware from "next-intl/middleware";
+import { withAuth } from "next-auth/middleware";
+import { locales } from "./i18n";
 
 const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: 'en',
-  localePrefix: 'always'
+  defaultLocale: "en",
+  localePrefix: "always",
 });
 
 export default withAuth(
@@ -16,15 +16,15 @@ export default withAuth(
     callbacks: {
       authorized: ({ token, req }) => {
         // Protect The Good Project routes
-        if (req.nextUrl.pathname.includes('/the-good-project')) {
-          return token?.role === 'subscriber' || token?.role === 'admin';
+        if (req.nextUrl.pathname.includes("/the-good-project")) {
+          return token?.role === "subscriber" || token?.role === "admin";
         }
-        
+
         // Protect dashboard routes
-        if (req.nextUrl.pathname.includes('/dashboard')) {
+        if (req.nextUrl.pathname.includes("/dashboard")) {
           return !!token;
         }
-        
+
         return true;
       },
     },
@@ -32,5 +32,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };

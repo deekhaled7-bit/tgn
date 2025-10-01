@@ -1,63 +1,57 @@
 "use client";
 
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Shield, 
-  Users, 
-  Globe, 
-  Zap, 
-  Heart, 
-  BookOpen 
-} from 'lucide-react';
-
+import React from "react";
+import { useTranslations } from "next-intl";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Users, Globe, Zap, Heart, BookOpen } from "lucide-react";
+import { useLocale } from "next-intl";
 export function FeaturesSection() {
-  const t = useTranslations('home.features');
+  const locale = useLocale();
+  const t = useTranslations("home.features");
 
   const features = [
     {
       icon: Shield,
-      title: t('exclusive.title'),
-      description: t('exclusive.description'),
-      color: 'from-hot-pink to-pink-600',
-      badge: 'Premium'
+      title: t("exclusive.title"),
+      description: t("exclusive.description"),
+      color: "from-hot-pink to-pink-600",
+      badge: "Premium",
     },
     {
       icon: Users,
-      title: t('community.title'),
-      description: t('community.description'),
-      color: 'from-bright-yellow to-yellow-600',
-      badge: 'Community'
+      title: t("community.title"),
+      description: t("community.description"),
+      color: "from-bright-yellow to-yellow-600",
+      badge: "Community",
     },
     {
       icon: Globe,
-      title: t('multilingual.title'),
-      description: t('multilingual.description'),
-      color: 'from-cream to-orange-400',
-      badge: 'Global'
+      title: t("multilingual.title"),
+      description: t("multilingual.description"),
+      color: "from-cream to-orange-400",
+      badge: "Global",
     },
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized performance with modern web technologies',
-      color: 'from-blue-500 to-purple-600',
-      badge: 'Performance'
+      title: "Lightning Fast",
+      description: "Optimized performance with modern web technologies",
+      color: "from-blue-500 to-purple-600",
+      badge: "Performance",
     },
     {
       icon: Heart,
-      title: 'Ad-Free Experience',
-      description: 'Clean, distraction-free reading for our subscribers',
-      color: 'from-red-500 to-pink-600',
-      badge: 'Premium'
+      title: "Ad-Free Experience",
+      description: "Clean, distraction-free reading for our subscribers",
+      color: "from-red-500 to-pink-600",
+      badge: "Premium",
     },
     {
       icon: BookOpen,
-      title: 'Rich Content',
-      description: 'In-depth articles, videos, and interactive content',
-      color: 'from-green-500 to-emerald-600',
-      badge: 'Content'
+      title: "Rich Content",
+      description: "In-depth articles, videos, and interactive content",
+      color: "from-green-500 to-emerald-600",
+      badge: "Content",
     },
   ];
 
@@ -66,12 +60,16 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {t('title')}
+          <h2
+            className={`${
+              locale === "ar" ? "font-arabic-heading" : "font-english-heading"
+            } text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6`}
+          >
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Discover what makes The Good News the perfect platform for modern readers 
-            who want quality content and meaningful connections.
+            Discover what makes The Good News the perfect platform for modern
+            readers who want quality content and meaningful connections.
           </p>
         </div>
 
@@ -87,23 +85,23 @@ export function FeaturesSection() {
               >
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between mb-6">
-                    <div 
+                    <div
                       className={`p-4 rounded-2xl bg-gradient-to-br ${feature.color} shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110`}
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <Badge 
-                      variant="secondary" 
+                    <Badge
+                      variant="secondary"
                       className="text-xs font-medium bg-muted/50"
                     >
                       {feature.badge}
                     </Badge>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-hot-pink transition-colors">
                     {feature.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>

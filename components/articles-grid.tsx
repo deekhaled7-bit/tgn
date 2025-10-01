@@ -1,30 +1,35 @@
 "use client";
 
-import React, { useState } from 'react';
-import { useLocale } from 'next-intl';
-import { ArticleCard } from '@/components/article-card';
-import { Button } from '@/components/ui/button';
-import { SAMPLE_ARTICLES } from '@/lib/constants';
-import { Loader2 } from 'lucide-react';
+import React, { useState } from "react";
+import { useLocale } from "next-intl";
+import { ArticleCard } from "@/components/article-card";
+import { Button } from "@/components/ui/button";
+import { SAMPLE_ARTICLES } from "@/lib/constants";
+import { Loader2 } from "lucide-react";
 
 export function ArticlesGrid() {
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  
+
   // Get articles for current locale
-  const articles = SAMPLE_ARTICLES[locale as keyof typeof SAMPLE_ARTICLES] || SAMPLE_ARTICLES.en;
-  
+  const articles =
+    SAMPLE_ARTICLES[locale as keyof typeof SAMPLE_ARTICLES] ||
+    SAMPLE_ARTICLES.en;
+
   const articlesPerPage = 6;
   const totalPages = Math.ceil(articles.length / articlesPerPage);
   const startIndex = (currentPage - 1) * articlesPerPage;
-  const displayedArticles = articles.slice(startIndex, startIndex + articlesPerPage);
+  const displayedArticles = articles.slice(
+    startIndex,
+    startIndex + articlesPerPage
+  );
 
   const handleLoadMore = () => {
     setLoading(true);
     // Simulate loading
     setTimeout(() => {
-      setCurrentPage(prev => prev + 1);
+      setCurrentPage((prev) => prev + 1);
       setLoading(false);
     }, 1000);
   };
@@ -34,11 +39,7 @@ export function ArticlesGrid() {
       {/* Articles Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {displayedArticles.map((article, index) => (
-          <ArticleCard
-            key={article.id}
-            article={article}
-            index={index}
-          />
+          <ArticleCard key={article.id} article={article} index={index} />
         ))}
       </div>
 
@@ -57,14 +58,14 @@ export function ArticlesGrid() {
                 Loading...
               </>
             ) : (
-              'Load More Articles'
+              "Load More Articles"
             )}
           </Button>
         </div>
       )}
 
       {/* Empty State */}
-      {articles.length === 0 && (
+      {/* {articles.length === 0 && (
         <div className="text-center py-20">
           <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-hot-pink/20 to-bright-yellow/20 rounded-full flex items-center justify-center">
             <span className="text-3xl">📰</span>
@@ -72,7 +73,7 @@ export function ArticlesGrid() {
           <h3 className="text-xl font-semibold text-foreground mb-2">No Articles Found</h3>
           <p className="text-muted-foreground">Try adjusting your search or filter criteria.</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

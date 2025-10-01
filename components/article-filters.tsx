@@ -165,7 +165,7 @@ export function ArticleFilters() {
               <Button
                 variant="outline"
                 onClick={clearFilters}
-                className="flex items-center space-x-2 rtl:space-x-reverse hover:bg-red-50 hover:border-red-200 hover:text-red-600 dark:hover:bg-red-950 dark:hover:border-red-800 dark:hover:text-red-400"
+                className="flex items-center space-x-2 rtl:space-x-reverse hover:bg-red-50 hover:border-red-200 hover:text-red-600"
               >
                 <X className="w-4 h-4" />
                 <span>Clear</span>

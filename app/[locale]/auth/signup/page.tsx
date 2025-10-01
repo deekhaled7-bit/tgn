@@ -85,7 +85,7 @@ export default function SignupPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30 dark:from-cream-dark dark:via-hot-pink-dark/20 dark:to-bright-yellow-dark/30 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30 flex items-center justify-center p-4">
         <Card className="w-full max-w-md border-0 shadow-2xl bg-background/95 backdrop-blur-sm">
           <CardContent className="p-8 text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-hot-pink to-bright-yellow rounded-full flex items-center justify-center mx-auto mb-6">
@@ -107,7 +107,7 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30 dark:from-cream-dark dark:via-hot-pink-dark/20 dark:to-bright-yellow-dark/30 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <Link

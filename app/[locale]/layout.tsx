@@ -1,12 +1,13 @@
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { locales } from '@/i18n';
-import { Metadata } from 'next';
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { locales } from "@/i18n";
+import { Metadata, Viewport } from "next";
+import { Navigation } from "@/components/navigation";
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -14,29 +15,45 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const isRTL = params.locale === 'ar';
-  
+  const { locale } = await params;
+  const isRTL = locale === "ar";
+
   return {
-    title: 'The Good News - Modern News & Blogging Platform',
-    description: 'Discover stories that matter, insights that inspire',
+    title: "The Good News - Modern News & Blogging Platform",
+    description: "Discover stories that matter, insights that inspire",
     other: {
-      'dir': isRTL ? 'rtl' : 'ltr',
+      dir: isRTL ? "rtl" : "ltr",
     },
   };
 }
 
+// Define viewport separately as required by Next.js 15
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default async function LocaleLayout({ children, params }: Props) {
-  if (!locales.includes(params.locale as any)) {
+  const { locale } = await params;
+
+  if (!locales.includes(locale as any)) {
     notFound();
   }
 
   const messages = await getMessages();
-  const isRTL = params.locale === 'ar';
-
+  const isRTL = locale === "ar";
+  const isLoggedIn = false;
+  const userRole = "user" as const;
+  
+  // Apply appropriate font based on locale
+  const fontClass = locale === "ar" ? "font-arabic" : "font-english";
+  
   return (
-    <html lang={params.locale} dir={isRTL ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
+      <body className={fontClass}>
         <NextIntlClientProvider messages={messages}>
+          <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
           {children}
         </NextIntlClientProvider>
       </body>

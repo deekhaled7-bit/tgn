@@ -14,7 +14,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30 dark:from-cream-dark dark:via-hot-pink-dark/20 dark:to-bright-yellow-dark/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cream via-hot-pink/20 to-bright-yellow/30" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">

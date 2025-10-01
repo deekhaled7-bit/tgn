@@ -1,24 +1,25 @@
-import { Metadata } from 'next';
-import { Navigation } from '@/components/navigation';
-import { HeroSection } from '@/components/hero-section';
-import { FeaturesSection } from '@/components/features-section';
-import { Footer } from '@/components/footer';
+import { Metadata } from "next";
+import { Navigation } from "@/components/navigation";
+import { HeroSection } from "@/components/hero-section";
+import { FeaturesSection } from "@/components/features-section";
+import { Footer } from "@/components/footer";
+import Hero from "./sections/Hero";
 
 export const metadata: Metadata = {
-  title: 'The Good News - Discover Stories That Matter',
-  description: 'Join our community of readers sharing positive stories. Access exclusive content, premium articles, and connect with like-minded individuals.',
+  title: "The Good News - Discover Stories That Matter",
+  description:
+    "Join our community of readers sharing positive stories. Access exclusive content, premium articles, and connect with like-minded individuals.",
 };
 
 export default function HomePage() {
   // In a real app, this would come from authentication context
-  const isLoggedIn = false;
-  const userRole = 'user' as const;
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
+    <div className="min-h-screen bg-cream">
+      {/* <Navigation isLoggedIn={isLoggedIn} userRole={userRole} /> */}
       <main>
-        <HeroSection />
+        <Hero />
+        {/* <HeroSection /> */}
         <FeaturesSection />
       </main>
       <Footer />
