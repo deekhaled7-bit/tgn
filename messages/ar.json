@@ -1,16 +1,55 @@
 {
   "nav": {
     "home": "الرئيسية",
-    "articles": "المقالات",
-    "theGoodProject": "المشروع الجيد",
-    "about": "حولنا",
-    "contact": "اتصل بنا",
+    "news": "الأخبار",
+    "projects": "مشروعاتنا",
+    "opportunities": "فرص",
+    "about": "عنّا",
+    "contact": "تواصل معانا",
+    "multimedia": "وسائط",
     "login": "تسجيل دخول",
     "signup": "إنشاء حساب",
     "logout": "تسجيل خروج",
     "dashboard": "لوحة التحكم",
     "search": "البحث في المقالات...",
-    "subscribe": "اشترك"
+    "subscribe": "اشترك",
+    "newsSubItems": {
+      "egyptNews": "أخبار مصر",
+      "uaeNews": "أخبار الإمارات",
+      "saudiNews": "أخبار السعودية",
+      "society": "مجتمع",
+      "business": "اقتصاد",
+      "education": "تعليم",
+      "sports": "رياضة",
+      "entertainment": "ترفيه",
+      "lifestyle": "لايف ستايل",
+      "sustainability": "استدامة",
+      "events": "فعاليات"
+    },
+    "projectsSubItems": {
+      "bigSisterTalks": "بودكاست Big Sister Talks",
+      "theGoodProject": "مشروعات التخرج",
+      "interviews": "مقابلات"
+    },
+    "opportunitiesSubItems": {
+      "theGoodIntern": "The Good Intern",
+      "workshops": "ورش عمل",
+      "programs": "برامج",
+      "scholarships": "منح"
+    },
+    "aboutSubItems": {
+      "ourStory": "قصتنا",
+      "team": "فريقنا",
+      "partners": "شركاؤنا",
+      "mediaPresence": "قالوا عنّا"
+    },
+    "contactSubItems": {
+      "beOurPartner": "كن شريك لنا",
+      "shareGoodNews": "شاركنا خبر حلو"
+    },
+    "multimediaSubItems": {
+      "mariamVideos": "فيديوهات مريم"
+    }
   },
   "home": {
     "hero": {

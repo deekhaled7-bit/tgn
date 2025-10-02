@@ -1,16 +1,55 @@
 {
   "nav": {
     "home": "Home",
-    "articles": "Articles",
-    "theGoodProject": "The Good Project",
+    "news": "News",
+    "projects": "Projects",
+    "opportunities": "Opportunities",
     "about": "About",
-    "contact": "Contact",
+    "contact": "Contact Us",
+    "multimedia": "Multimedia",
     "login": "Login",
     "signup": "Sign Up",
     "logout": "Logout",
     "dashboard": "Dashboard",
     "search": "Search articles...",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "newsSubItems": {
+      "egyptNews": "Egypt News",
+      "uaeNews": "UAE News",
+      "saudiNews": "Saudi News",
+      "society": "Society",
+      "business": "Business",
+      "education": "Education",
+      "sports": "Sports",
+      "entertainment": "Entertainment",
+      "lifestyle": "Lifestyle",
+      "sustainability": "Sustainability",
+      "events": "Events"
+    },
+    "projectsSubItems": {
+      "bigSisterTalks": "Big Sister Talks Podcast",
+      "theGoodProject": "The Good Project",
+      "interviews": "Interviews"
+    },
+    "opportunitiesSubItems": {
+      "theGoodIntern": "The Good Intern",
+      "workshops": "Workshops",
+      "programs": "Programs",
+      "scholarships": "Scholarships"
+    },
+    "aboutSubItems": {
+      "ourStory": "Our Story",
+      "team": "Team",
+      "partners": "Partners",
+      "mediaPresence": "Media Presence"
+    },
+    "contactSubItems": {
+      "beOurPartner": "Be our partner",
+      "shareGoodNews": "Share your good news"
+    },
+    "multimediaSubItems": {
+      "mariamVideos": "Mariam's Videos"
+    }
   },
   "home": {
     "hero": {
