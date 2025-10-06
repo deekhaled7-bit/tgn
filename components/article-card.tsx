@@ -68,13 +68,13 @@ export function ArticleCard({ article, index = 0 }: ArticleCardProps) {
                 <span className="text-5xl text-white/80">📰</span>
               </div>
             )}
-            {article.isExclusive && (
+            {/* {article.isExclusive && (
               <div className="md:hidden absolute top-4 right-4">
                 <Badge className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full border-0 shadow">
                   {t("exclusive")}
                 </Badge>
               </div>
-            )}
+            )} */}
 
             {/* Soft divider to mimic the central split */}
             <div className="absolute inset-y-0 right-0 w-1 bg-white/60" />
@@ -149,13 +149,13 @@ export function ArticleCard({ article, index = 0 }: ArticleCardProps) {
             </div> */}
 
             {/* Exclusive badge top-right */}
-            {article.isExclusive && (
+            {/* {article.isExclusive && (
               <div className="max-md:hidden absolute top-6 right-6">
                 <Badge className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full border-0 shadow">
                   {t("exclusive")}
                 </Badge>
               </div>
-            )}
+            )} */}
           </div>
         </div>
 

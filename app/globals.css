@@ -2,30 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 /* Custom Font Definitions */
 
 /* Arabic Fonts */
 @font-face {
-  font-family: 'Frutiger LT Arabic';
-  src: url('./[locale]/fonts/header/arabic/frutigerltarabic75black.ttf') format('truetype');
+  font-family: "Frutiger LT Arabic";
+  src: url("./[locale]/fonts/header/arabic/frutigerltarabic75black.ttf")
+    format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Raqami Arabic';
-  src: url('./[locale]/fonts/subHeading/arabic/alfont_com_AlFont_com_Raqami.ttf') format('truetype');
+  font-family: "Raqami Arabic";
+  src: url("./[locale]/fonts/subHeading/arabic/alfont_com_AlFont_com_Raqami.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Graphik Arabic';
-  src: url('./[locale]/fonts/body/arabic/GraphikArabic-Regular.ttf') format('truetype');
+  font-family: "Graphik Arabic";
+  src: url("./[locale]/fonts/body/arabic/GraphikArabic-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -33,24 +36,26 @@
 
 /* English Fonts */
 @font-face {
-  font-family: 'Helvetica Neue Heavy';
-  src: url('./[locale]/fonts/header/english/HelveticaNeue-HeavyCondObl.otf') format('opentype');
+  font-family: "Helvetica Neue Heavy";
+  src: url("./[locale]/fonts/header/english/HelveticaNeue-HeavyCondObl.otf")
+    format("opentype");
   font-weight: 900;
   font-style: oblique;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Bitend Mono';
-  src: url('./[locale]/fonts/subHeading/english/Bitend Mono.ttf') format('truetype');
+  font-family: "Bitend Mono";
+  src: url("./[locale]/fonts/subHeading/english/Bitend Mono.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Visby Regular';
-  src: url('./[locale]/fonts/body/english/VisbyRegular.otf') format('opentype');
+  font-family: "Visby Regular";
+  src: url("./[locale]/fonts/body/english/VisbyRegular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -60,37 +65,37 @@
 @layer utilities {
   /* Arabic Font Classes */
   .font-header-ar {
-    font-family: 'Frutiger LT Arabic', 'Arial', sans-serif;
+    font-family: "Frutiger LT Arabic", "Arial", sans-serif;
   }
-  
+
   .font-subheading-ar {
-    font-family: 'Raqami Arabic', 'Arial', sans-serif;
+    font-family: "Raqami Arabic", "Arial", sans-serif;
   }
-  
+
   .font-body-ar {
-    font-family: 'Graphik Arabic', 'Arial', sans-serif;
+    font-family: "Graphik Arabic", "Arial", sans-serif;
   }
-  
+
   /* English Font Classes */
   .font-header-en {
-    font-family: 'Helvetica Neue Heavy', 'Inter', system-ui, sans-serif;
+    font-family: "Helvetica Neue Heavy", "Inter", system-ui, sans-serif;
   }
-  
+
   .font-subheading-en {
-    font-family: 'Bitend Mono', 'Inter', system-ui, monospace;
+    font-family: "Bitend Mono", "Inter", system-ui, monospace;
   }
-  
+
   .font-body-en {
-    font-family: 'Visby Regular', 'Inter', system-ui, sans-serif;
+    font-family: "Visby Regular", "Inter", system-ui, sans-serif;
   }
-  
+
   /* Legacy classes for backward compatibility */
   .font-heading-ar {
-    font-family: 'Frutiger LT Arabic', 'Arial', sans-serif;
+    font-family: "Frutiger LT Arabic", "Arial", sans-serif;
   }
-  
+
   .font-heading-en {
-    font-family: 'Helvetica Neue Heavy', 'Inter', system-ui, sans-serif;
+    font-family: "Helvetica Neue Heavy", "Inter", system-ui, sans-serif;
   }
 }
 
@@ -137,7 +142,7 @@
     --radius: 0.75rem;
   }
 
-  .dark {
+  /* .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -162,28 +167,28 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
+  } */
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   /* RTL Support */
   [dir="rtl"] {
     text-align: right;
   }
-  
+
   [dir="rtl"] .ltr-content {
     direction: ltr;
     text-align: left;
@@ -192,34 +197,34 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #F6EDDD 0%, #FF9ACC 50%, #FFFF32 100%);
+    background: linear-gradient(135deg, #f6eddd 0%, #ff9acc 50%, #ffff32 100%);
   }
-  
-  .gradient-bg-dark {
+
+  /* .gradient-bg-dark {
     background: linear-gradient(135deg, #2D2620 0%, #B8679C 50%, #D4D428 100%);
-  }
-  
+  } */
+
   .card-hover {
     @apply transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-xl;
   }
-  
+
   .button-glow {
     @apply relative overflow-hidden;
   }
-  
+
   .button-glow::before {
-    content: '';
+    content: "";
     @apply absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full transition-transform duration-700;
   }
-  
+
   .button-glow:hover::before {
     @apply translate-x-full;
   }
-  
+
   .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
