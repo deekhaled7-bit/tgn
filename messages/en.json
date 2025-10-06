@@ -194,8 +194,12 @@
       "madeWith": "Made with",
       "by": "by The Good News Team"
     }
-  }
-  ,
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "This page is coming soon. Please check back later.",
+    "goHome": "Go to Home"
+  },
   "team": {
     "title": "OUR TEAM",
     "subtitle": "YOUR SUPPORT SYSTEM",
