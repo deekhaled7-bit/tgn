@@ -98,20 +98,6 @@ export default function TeamPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-10"
         >
-          {/* <div
-            className={`text-5xl md:text-6xl lg:text-7xl font-extrabold ${
-              isRTL ? "font-arabic-header" : "font-english-heading"
-            } text-carbon`}
-          >
-            {t("title")}
-          </div> */}
-          {/* <div
-            className={`text-2xl md:text-3xl font-bold mt-3 ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
-            } text-carbon`}
-          >
-            {t("subtitle")}
-          </div> */}
           <span className="inline-block mt-2 text-hot-pink font-bold tracking-wide">
             {t("creativeLabel")}
           </span>
