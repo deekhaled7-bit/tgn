@@ -80,7 +80,7 @@ export function Navigation({
   // Function to get the current path with the other locale
   const getLocalizedPath = () => {
     // Remove the current locale from the pathname and add the other locale
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    const pathWithoutLocale = pathname.replace(`/${locale}`, "") || "/";
     return `/${otherLocale}${pathWithoutLocale}`;
   };
 
@@ -95,16 +95,34 @@ export function Navigation({
       label: t("news"),
       type: "dropdown",
       items: [
-        { href: `/${locale}/articles?category=egypt`, label: t("newsSubItems.egyptNews") },
-        { href: `/${locale}/articles?category=uae`, label: t("newsSubItems.uaeNews") },
-        { href: `/${locale}/articles?category=saudi`, label: t("newsSubItems.saudiNews") },
-        { href: `/${locale}/articles?category=society`, label: t("newsSubItems.society") },
-        { href: `/${locale}/articles?category=business`, label: t("newsSubItems.business") },
+        {
+          href: `/${locale}/articles?category=egypt`,
+          label: t("newsSubItems.egyptNews"),
+        },
+        {
+          href: `/${locale}/articles?category=uae`,
+          label: t("newsSubItems.uaeNews"),
+        },
+        {
+          href: `/${locale}/articles?category=saudi`,
+          label: t("newsSubItems.saudiNews"),
+        },
+        {
+          href: `/${locale}/articles?category=society`,
+          label: t("newsSubItems.society"),
+        },
+        {
+          href: `/${locale}/articles?category=business`,
+          label: t("newsSubItems.business"),
+        },
         {
           href: `/${locale}/articles?category=education`,
           label: t("newsSubItems.education"),
         },
-        { href: `/${locale}/articles?category=sports`, label: t("newsSubItems.sports") },
+        {
+          href: `/${locale}/articles?category=sports`,
+          label: t("newsSubItems.sports"),
+        },
         {
           href: `/${locale}/articles?category=entertainment`,
           label: t("newsSubItems.entertainment"),
@@ -117,7 +135,10 @@ export function Navigation({
           href: `/${locale}/articles?category=sustainability`,
           label: t("newsSubItems.sustainability"),
         },
-        { href: `/${locale}/articles?category=events`, label: t("newsSubItems.events") },
+        {
+          href: `/${locale}/articles?category=events`,
+          label: t("newsSubItems.events"),
+        },
       ],
     },
     {
@@ -213,8 +234,8 @@ export function Navigation({
         scrolled ? "backdrop-blur-md bg-background/60" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto ">
+        <div className="flex items-center px-4 sm:px-6 lg:px-8 justify-between">
           {/* Logo */}
           <Link
             href={`/${locale}`}
@@ -385,7 +406,7 @@ export function Navigation({
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-cream border-t py-4 animate-slide-up">
+          <div className="md:hidden px-4 sm:px-6 lg:px-8 w-full bg-cream border-t py-4 animate-slide-up">
             <div className="flex flex-col space-y-4">
               {/* Mobile Search */}
               {/* <div className="relative">

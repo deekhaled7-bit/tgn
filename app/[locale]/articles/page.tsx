@@ -42,7 +42,7 @@ export default function ArticlesPage() {
     <div className="bg-cream">
       <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
 
-      <main className="pt-20">
+      <main className="min-h-screen pt-20">
         {/* Page Header */}
         <section className="pt-16 pb-8 bg-mint-green">
           <div className="container mx-auto px-4">
@@ -74,7 +74,11 @@ export default function ArticlesPage() {
         {/* Articles Grid (filtered by category via searchParams) */}
         <section className="">
           <div className="container mx-auto px-4">
-            <Suspense fallback={<div className="py-12 text-center">Loading articles...</div>}>
+            <Suspense
+              fallback={
+                <div className="py-12 text-center">Loading articles...</div>
+              }
+            >
               <ArticlesByCategory isInView={isInView} />
             </Suspense>
           </div>
@@ -107,11 +111,7 @@ export default function ArticlesPage() {
 }
 
 function slugify(text: string) {
-  return text
-    .toString()
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-");
+  return text.toString().trim().toLowerCase().replace(/\s+/g, "-");
 }
 
 function humanizeSlug(slug: string) {
@@ -132,8 +132,10 @@ function ArticlesByCategory({ isInView }: { isInView: boolean }) {
     categoryParam === "all"
       ? sampleArticles
       : sampleArticles.filter((a) => {
-          const en = typeof a.category === "string" ? a.category : a.category.en;
-          const ar = typeof a.category === "string" ? a.category : a.category.ar;
+          const en =
+            typeof a.category === "string" ? a.category : a.category.en;
+          const ar =
+            typeof a.category === "string" ? a.category : a.category.ar;
           const enSlug = slugify(en);
           const arSlug = slugify(ar);
           return enSlug === categoryParam || arSlug === categoryParam;

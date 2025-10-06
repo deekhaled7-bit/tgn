@@ -10,7 +10,7 @@ const Hero = () => {
   const t = useTranslations("home");
 
   return (
-    <div className="relative flex md:pt-[10vh] flex-col justify-center items-center overflow-hidden bg-cream h-[70vh] md:min-h-[100vh]">
+    <div className="relative flex md:pt-[10vh] flex-col justify-center items-center overflow-hidden bg-cream h-[100vh] md:min-h-[100vh]">
       {/* Floating elements from assets - BIGGER SIZES */}
       {/* movee */}
       <div className="absolute top-32 right-[1%] md:right-[20%] animate-bounce-soft">
@@ -19,7 +19,7 @@ const Hero = () => {
           alt="Floating element"
           width={160}
           height={160}
-          className="transform -rotate-6"
+          className="transform -rotate-6 w-[200px] h-[200px] md:w-[160px] md:h-[160px]"
         />
       </div>
       {/* GoodNewsGoodMood */}
@@ -39,18 +39,18 @@ const Hero = () => {
           alt="Floating element"
           width={120}
           height={120}
-          className="transform rotate-6"
+          className="transform rotate-6 w-[180px] h-[180px] md:w-[120px] md:h-[120px]"
           style={{ animation: "float-slow 5s ease-in-out infinite" }}
         />
       </div>
       {/* latestNews */}
-      <div className="absolute max-md:-bottom-10 md:top-24 z-20 md:left-[10%] animate-float">
+      <div className="absolute max-md:bottom-0 md:top-24 z-20 md:left-[10%] animate-float">
         <Image
           src="/assets/TGN_ELEMENTS_PNG-40.png"
           alt="Floating element"
           width={350}
           height={300}
-          className="transform rotate-3"
+          className="transform rotate-3 w-[430px] h-[400px] md:w-[350px] md:h-[300px]"
           style={{ animation: "float-slow 5s ease-in-out infinite" }}
         />
       </div>
@@ -120,7 +120,7 @@ const Hero = () => {
               alt="Digital Experience"
               width={600}
               height={600}
-              className="object-contain"
+              className="object-contain w-[1000px] h-[800px] md:w-[600px] md:h-[600px] "
             />
 
             {/* Growth percentage */}
