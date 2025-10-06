@@ -1,19 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
 import { ArticleCard } from "@/components/article-card";
 import { Button } from "@/components/ui/button";
-import { sampleArticles } from "@/lib/articles-data";
+import { sampleArticles, Article } from "@/lib/articles-data";
 import { Loader2 } from "lucide-react";
 
-export function ArticlesGrid() {
+interface ArticlesGridProps {
+  articles?: Article[];
+}
+
+export function ArticlesGrid({ articles: inputArticles }: ArticlesGridProps) {
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Use the internationalized articles
-  const articles = sampleArticles;
+  // Use provided articles or fall back to sample
+  const articles = inputArticles ?? sampleArticles;
+
+  // Reset pagination when filtered articles change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [inputArticles]);
 
   const articlesPerPage = 6;
   const totalPages = Math.ceil(articles.length / articlesPerPage);

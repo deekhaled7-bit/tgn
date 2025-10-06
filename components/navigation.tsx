@@ -95,29 +95,29 @@ export function Navigation({
       label: t("news"),
       type: "dropdown",
       items: [
-        { href: `/${locale}/news/egypt`, label: t("newsSubItems.egyptNews") },
-        { href: `/${locale}/news/uae`, label: t("newsSubItems.uaeNews") },
-        { href: `/${locale}/news/saudi`, label: t("newsSubItems.saudiNews") },
-        { href: `/${locale}/news/society`, label: t("newsSubItems.society") },
-        { href: `/${locale}/news/business`, label: t("newsSubItems.business") },
+        { href: `/${locale}/articles?category=egypt`, label: t("newsSubItems.egyptNews") },
+        { href: `/${locale}/articles?category=uae`, label: t("newsSubItems.uaeNews") },
+        { href: `/${locale}/articles?category=saudi`, label: t("newsSubItems.saudiNews") },
+        { href: `/${locale}/articles?category=society`, label: t("newsSubItems.society") },
+        { href: `/${locale}/articles?category=business`, label: t("newsSubItems.business") },
         {
-          href: `/${locale}/news/education`,
+          href: `/${locale}/articles?category=education`,
           label: t("newsSubItems.education"),
         },
-        { href: `/${locale}/news/sports`, label: t("newsSubItems.sports") },
+        { href: `/${locale}/articles?category=sports`, label: t("newsSubItems.sports") },
         {
-          href: `/${locale}/news/entertainment`,
+          href: `/${locale}/articles?category=entertainment`,
           label: t("newsSubItems.entertainment"),
         },
         {
-          href: `/${locale}/news/lifestyle`,
+          href: `/${locale}/articles?category=lifestyle`,
           label: t("newsSubItems.lifestyle"),
         },
         {
-          href: `/${locale}/news/sustainability`,
+          href: `/${locale}/articles?category=sustainability`,
           label: t("newsSubItems.sustainability"),
         },
-        { href: `/${locale}/news/events`, label: t("newsSubItems.events") },
+        { href: `/${locale}/articles?category=events`, label: t("newsSubItems.events") },
       ],
     },
     {
@@ -147,19 +147,19 @@ export function Navigation({
       type: "dropdown",
       items: [
         {
-          href: `/${locale}/opportunities/intern`,
+          href: `/${locale}/articles?category=intern`,
           label: t("opportunitiesSubItems.theGoodIntern"),
         },
         {
-          href: `/${locale}/opportunities/workshops`,
+          href: `/${locale}/articles?category=workshops`,
           label: t("opportunitiesSubItems.workshops"),
         },
         {
-          href: `/${locale}/opportunities/programs`,
+          href: `/${locale}/articles?category=programs`,
           label: t("opportunitiesSubItems.programs"),
         },
         {
-          href: `/${locale}/opportunities/scholarships`,
+          href: `/${locale}/articles?category=scholarships`,
           label: t("opportunitiesSubItems.scholarships"),
         },
       ],

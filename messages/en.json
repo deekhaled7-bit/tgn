@@ -85,7 +85,9 @@
     "searchPlaceholder": "Search articles...",
     "viewAll": "View All Articles",
     "loadMore": "Load More",
-    "exclusive": "Exclusive"
+    "exclusive": "Exclusive",
+    "headerSubtitle": "Explore our collection of inspiring stories, exclusive interviews, and thought-provoking articles that celebrate the beauty of life",
+    "moreComing": "More inspiring stories coming soon..."
   },
   "auth": {
     "login": {
