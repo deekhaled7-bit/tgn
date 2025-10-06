@@ -4,8 +4,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { routing } from "@/i18n/routing";
-
-import { ThemeProvider } from "@/components/theme-provider";
 import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -35,5 +33,11 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+      </body>
+    </html>
+  );
 }

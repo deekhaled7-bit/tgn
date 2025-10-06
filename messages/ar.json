@@ -75,13 +75,17 @@
   },
   "articles": {
     "title": "أحدث المقالات",
+    "featured": "مميز",
     "categories": "الفئات",
     "allCategories": "جميع الفئات",
     "readMore": "اقرأ المزيد",
     "publishedOn": "نُشر في",
     "byAuthor": "بواسطة {author}",
     "noArticles": "لا توجد مقالات",
-    "searchPlaceholder": "البحث في المقالات..."
+    "searchPlaceholder": "البحث في المقالات...",
+    "viewAll": "عرض جميع المقالات",
+    "loadMore": "تحميل المزيد",
+    "exclusive": "حصري"
   },
   "auth": {
     "login": {
@@ -153,5 +157,54 @@
     "back": "رجوع",
     "next": "التالي",
     "previous": "السابق"
+  },
+  "quote": {
+    "inspirational": "رسالة امل واحدة , رايحة اماكن كتير."
+  },
+  "footer": {
+    "brand": {
+      "name": "الأخبار الحلوة",
+      "description": "اكتشف القصص التي تهم، والرؤى التي تلهم. انضم إلى مجتمعنا من القراء الذين يشاركون القصص الإيجابية من جميع أنحاء العالم."
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "home": "الرئيسية",
+      "articles": "المقالات",
+      "about": "عنّا",
+      "contact": "تواصل معنا",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة"
+    },
+    "contact": {
+      "title": "تواصل معنا",
+      "email": "hello@thegoodnews.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "نيويورك، نيويورك 10001"
+    },
+    "newsletter": {
+      "title": "ابق على اطلاع",
+      "description": "اشترك في نشرتنا الإخبارية للحصول على أحدث المقالات والمحتوى الحصري.",
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "subscribe": "اشترك"
+    },
+    "bottom": {
+      "copyright": "© {year} الأخبار الحلوة. جميع الحقوق محفوظة.",
+      "madeWith": "صُنع بـ",
+      "by": "من قبل فريق الأخبار الحلوة"
+    }
+  }
+  ,
+  "team": {
+    "title": "فريقنا",
+    "subtitle": "نظام الدعم الخاص بك",
+    "opsLabel": "العمليات",
+    "creativeLabel": "الإبداع"
+  },
+  "roles": {
+    "founderCeoPresenter": { "line1": "المؤسس والرئيس التنفيذي و", "line2": "المقدم الرئيسي" },
+    "projectManager": { "line1": "مدير", "line2": "المشروعات" },
+    "editorialManager": { "line1": "مدير", "line2": "التحرير" },
+    "editorialExecutive": { "line1": "مسؤول", "line2": "تحرير" },
+    "videoEditorAnimator": { "line1": "محرر فيديو", "line2": "ومصمم تحريك" }
   }
 }

@@ -77,6 +77,13 @@ export function Navigation({
   const isRTL = locale === "ar";
   const otherLocale = locale === "en" ? "ar" : "en";
 
+  // Function to get the current path with the other locale
+  const getLocalizedPath = () => {
+    // Remove the current locale from the pathname and add the other locale
+    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    return `/${otherLocale}${pathWithoutLocale}`;
+  };
+
   // Comprehensive navigation structure with dropdowns
   const navItems: NavItem[] = [
     {
@@ -305,7 +312,7 @@ export function Navigation({
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             {/* Language Toggle */}
             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
-              <Link href={`/${otherLocale}`}>
+              <Link href={getLocalizedPath()}>
                 <Globe className="h-4 w-4" />
                 <span className="sr-only">Change language</span>
               </Link>
@@ -381,7 +388,7 @@ export function Navigation({
           <div className="md:hidden bg-cream border-t py-4 animate-slide-up">
             <div className="flex flex-col space-y-4">
               {/* Mobile Search */}
-              <div className="relative">
+              {/* <div className="relative">
                 <Search className="absolute left-3 rtl:left-auto rtl:right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
                   type="search"
@@ -390,7 +397,7 @@ export function Navigation({
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10 rtl:pl-4 rtl:pr-10"
                 />
-              </div>
+              </div> */}
 
               {/* Mobile Navigation Links */}
               {navItems.map((item, index) => (

@@ -4,6 +4,8 @@ import { getMessages } from "next-intl/server";
 import { locales } from "@/i18n";
 import { Metadata, Viewport } from "next";
 import { Navigation } from "@/components/navigation";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeScript } from "@/components/theme-script";
 
 type Props = {
   children: React.ReactNode;
@@ -51,11 +53,21 @@ export default async function LocaleLayout({ children, params }: Props) {
   
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
-      <body className={fontClass}>
-        <NextIntlClientProvider messages={messages}>
-          <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
-          {children}
-        </NextIntlClientProvider>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className={fontClass} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

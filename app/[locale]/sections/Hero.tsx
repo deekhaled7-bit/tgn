@@ -44,7 +44,7 @@ const Hero = () => {
         />
       </div>
       {/* latestNews */}
-      <div className="absolute max-md:-bottom-2 md:top-24 z-20 md:left-[10%] animate-float">
+      <div className="absolute max-md:-bottom-10 md:top-24 z-20 md:left-[10%] animate-float">
         <Image
           src="/assets/TGN_ELEMENTS_PNG-40.png"
           alt="Floating element"

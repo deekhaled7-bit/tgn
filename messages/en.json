@@ -75,13 +75,17 @@
   },
   "articles": {
     "title": "Latest Articles",
+    "featured": "Featured",
     "categories": "Categories",
     "allCategories": "All Categories",
     "readMore": "Read More",
     "publishedOn": "Published on",
     "byAuthor": "By {author}",
     "noArticles": "No articles found",
-    "searchPlaceholder": "Search articles..."
+    "searchPlaceholder": "Search articles...",
+    "viewAll": "View All Articles",
+    "loadMore": "Load More",
+    "exclusive": "Exclusive"
   },
   "auth": {
     "login": {
@@ -153,5 +157,54 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous"
+  },
+  "quote": {
+    "inspirational": "same positivity, more places."
+  },
+  "footer": {
+    "brand": {
+      "name": "The Good News",
+      "description": "Discover stories that matter, insights that inspire. Join our community of readers sharing positive stories from around the world."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "articles": "Articles",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "hello@thegoodnews.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "New York, NY 10001"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest articles and exclusive content.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "bottom": {
+      "copyright": "© {year} The Good News. All rights reserved.",
+      "madeWith": "Made with",
+      "by": "by The Good News Team"
+    }
+  }
+  ,
+  "team": {
+    "title": "OUR TEAM",
+    "subtitle": "YOUR SUPPORT SYSTEM",
+    "opsLabel": "OPERATIONS",
+    "creativeLabel": "CREATIVE"
+  },
+  "roles": {
+    "founderCeoPresenter": { "line1": "Founder, CEO and", "line2": "Lead Presenter" },
+    "projectManager": { "line1": "Project", "line2": "Manager" },
+    "editorialManager": { "line1": "Editorial", "line2": "Manager" },
+    "editorialExecutive": { "line1": "Editorial", "line2": "Executive" },
+    "videoEditorAnimator": { "line1": "Video Editor", "line2": "and Animator" }
   }
 }

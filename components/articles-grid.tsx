@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useLocale } from "next-intl";
 import { ArticleCard } from "@/components/article-card";
 import { Button } from "@/components/ui/button";
-import { SAMPLE_ARTICLES } from "@/lib/constants";
+import { sampleArticles } from "@/lib/articles-data";
 import { Loader2 } from "lucide-react";
 
 export function ArticlesGrid() {
@@ -12,10 +12,8 @@ export function ArticlesGrid() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Get articles for current locale
-  const articles =
-    SAMPLE_ARTICLES[locale as keyof typeof SAMPLE_ARTICLES] ||
-    SAMPLE_ARTICLES.en;
+  // Use the internationalized articles
+  const articles = sampleArticles;
 
   const articlesPerPage = 6;
   const totalPages = Math.ceil(articles.length / articlesPerPage);
@@ -37,7 +35,7 @@ export function ArticlesGrid() {
   return (
     <div className="space-y-12">
       {/* Articles Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
         {displayedArticles.map((article, index) => (
           <ArticleCard key={article.id} article={article} index={index} />
         ))}

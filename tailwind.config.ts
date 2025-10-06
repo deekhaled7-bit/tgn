@@ -16,15 +16,30 @@ const config: Config = {
         "arabic-body": ["Graphik Arabic", "Arial", "sans-serif"],
 
         // English fonts
-        "english-header": ["Helvetica Neue Heavy", "Inter", "system-ui", "sans-serif"],
-        "english-subheading": ["Bitend Mono", "Inter", "system-ui", "monospace"],
+        "english-header": [
+          "Helvetica Neue Heavy",
+          "Inter",
+          "system-ui",
+          "sans-serif",
+        ],
+        "english-subheading": [
+          "Bitend Mono",
+          "Inter",
+          "system-ui",
+          "monospace",
+        ],
         "english-body": ["Visby Regular", "Inter", "system-ui", "sans-serif"],
 
         // Legacy font families for backward compatibility
         arabic: ["Graphik Arabic", "Arial", "sans-serif"],
         "arabic-heading": ["Frutiger LT Arabic", "Arial", "sans-serif"],
         english: ["Visby Regular", "Inter", "system-ui", "sans-serif"],
-        "english-heading": ["Helvetica Neue Heavy", "Inter", "system-ui", "sans-serif"],
+        "english-heading": [
+          "Helvetica Neue Heavy",
+          "Inter",
+          "system-ui",
+          "sans-serif",
+        ],
 
         // Default fallbacks
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -34,6 +49,7 @@ const config: Config = {
         cream: "#F6EDDD",
         "hot-pink": "#FF9ACC",
         "bright-yellow": "#FFFF32",
+        purple: "#9966FF",
 
         // Dark mode variants
         "cream-dark": "#2D2620",
