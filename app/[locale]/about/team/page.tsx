@@ -38,7 +38,7 @@ export default function TeamPage() {
           initial={{ opacity: 0, filter: "blur(20px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-10"
+          className="text-center mb-10 md:mb-6"
         >
           <div
             className={`text-5xl md:text-6xl lg:text-7xl font-extrabold ${
@@ -73,7 +73,7 @@ export default function TeamPage() {
                 roles("founderCeoPresenter.line1"),
                 roles("founderCeoPresenter.line2"),
               ]}
-              imageSrc="/logos/TGN_LOGOS_PNG-03.png"
+              imageSrc="/team/mariamEdit.JPG"
             />
           </motion.div>
           <motion.div variants={item}>
@@ -83,7 +83,7 @@ export default function TeamPage() {
                 roles("projectManager.line1"),
                 roles("projectManager.line2"),
               ]}
-              imageSrc="/logos/TGN_LOGOS_PNG-03.png"
+              imageSrc="/team/jannah.jpg"
             />
           </motion.div>
         </motion.div>
@@ -117,7 +117,7 @@ export default function TeamPage() {
                 roles("editorialManager.line1"),
                 roles("editorialManager.line2"),
               ]}
-              imageSrc="/logos/TGN_LOGOS_PNG-03.png"
+              imageSrc="/team/robaEdit.JPEG"
             />
           </motion.div>
           <motion.div variants={item}>
@@ -127,7 +127,7 @@ export default function TeamPage() {
                 roles("editorialExecutive.line1"),
                 roles("editorialExecutive.line2"),
               ]}
-              imageSrc="/logos/TGN_LOGOS_PNG-03.png"
+              imageSrc="/team/yasmine.jpg"
             />
           </motion.div>
           <motion.div variants={item}>
@@ -137,9 +137,25 @@ export default function TeamPage() {
                 roles("videoEditorAnimator.line1"),
                 roles("videoEditorAnimator.line2"),
               ]}
-              imageSrc="/logos/TGN_LOGOS_PNG-03.png"
+              imageSrc="/team/youmna.jpg"
             />
           </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Join the Team Button */}
+      <section className="max-w-6xl mx-auto mt-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <a href={`/${locale}/about/team/join`} className="inline-block">
+            <button className="bg-hot-pink hover:bg-hot-pink/90 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+              {t("joinTeamButton")}
+            </button>
+          </a>
         </motion.div>
       </section>
     </div>

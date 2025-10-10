@@ -10,7 +10,18 @@ const intlMiddleware = createMiddleware({
 
 export default withAuth(
   function onSuccess(req) {
-    return intlMiddleware(req);
+    const response = intlMiddleware(req);
+    
+    // Extract locale from pathname and add as header
+    const pathname = req.nextUrl.pathname;
+    const locale = pathname.split("/")[1] || "en";
+    
+    if (response) {
+      response.headers.set("x-locale", locale);
+      response.headers.set("x-pathname", pathname);
+    }
+    
+    return response;
   },
   {
     callbacks: {

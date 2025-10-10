@@ -139,66 +139,67 @@ export function Navigation({
           href: `/${locale}/articles?category=events`,
           label: t("newsSubItems.events"),
         },
-      ],
-    },
-    {
-      label: t("projects"),
-      type: "dropdown",
-      items: [
         {
-          href: `/${locale}/projects/big-sister-talks`,
-          label: t("projectsSubItems.bigSisterTalks"),
-        },
-        ...(isLoggedIn && userRole === "subscriber"
-          ? [
-              {
-                href: `/${locale}/the-good-project`,
-                label: t("projectsSubItems.theGoodProject"),
-              },
-            ]
-          : []),
-        {
-          href: `/${locale}/projects/interviews`,
+          href: `/${locale}/articles?category=interviews`,
           label: t("projectsSubItems.interviews"),
         },
       ],
     },
-    {
-      label: t("opportunities"),
-      type: "dropdown",
-      items: [
-        {
-          href: `/${locale}/articles?category=intern`,
-          label: t("opportunitiesSubItems.theGoodIntern"),
-        },
-        {
-          href: `/${locale}/articles?category=workshops`,
-          label: t("opportunitiesSubItems.workshops"),
-        },
-        {
-          href: `/${locale}/articles?category=programs`,
-          label: t("opportunitiesSubItems.programs"),
-        },
-        {
-          href: `/${locale}/articles?category=scholarships`,
-          label: t("opportunitiesSubItems.scholarships"),
-        },
-      ],
-    },
+    // {
+    //   label: t("projects"),
+    //   type: "dropdown",
+    //   items: [
+    //     {
+    //       href: `/${locale}/projects/big-sister-talks`,
+    //       label: t("projectsSubItems.bigSisterTalks"),
+    //     },
+    //     ...(isLoggedIn && userRole === "subscriber"
+    //       ? [
+    //           {
+    //             href: `/${locale}/the-good-project`,
+    //             label: t("projectsSubItems.theGoodProject"),
+    //           },
+    //         ]
+    //       : []),
+
+    //   ],
+    // },
+    // {
+    //   label: t("opportunities"),
+    //   type: "dropdown",
+    //   items: [
+    //     {
+    //       href: `/${locale}/articles?category=intern`,
+    //       label: t("opportunitiesSubItems.theGoodIntern"),
+    //     },
+    //     // {
+    //     //   href: `/${locale}/articles?category=workshops`,
+    //     //   label: t("opportunitiesSubItems.workshops"),
+    //     // },
+    //     {
+    //       href: `/${locale}/articles?category=programs`,
+    //       label: t("opportunitiesSubItems.programs"),
+    //     },
+    //     {
+    //       href: `/${locale}/articles?category=scholarships`,
+    //       label: t("opportunitiesSubItems.scholarships"),
+    //     },
+    //   ],
+    // },
     {
       label: t("about"),
       type: "dropdown",
       items: [
         { href: `/${locale}/about/story`, label: t("aboutSubItems.ourStory") },
         { href: `/${locale}/about/team`, label: t("aboutSubItems.team") },
-        {
-          href: `/${locale}/about/partners`,
-          label: t("aboutSubItems.partners"),
-        },
-        {
-          href: `/${locale}/about/media`,
-          label: t("aboutSubItems.mediaPresence"),
-        },
+        // {
+        //   href: `/${locale}/about/partners`,
+        //   label: t("aboutSubItems.partners"),
+        // },
+        // {
+        //   href: `/${locale}/about/media`,
+        //   label: t("aboutSubItems.mediaPresence"),
+        // },
       ],
     },
     {
@@ -206,23 +207,51 @@ export function Navigation({
       type: "dropdown",
       items: [
         { href: `/${locale}/contact`, label: t("contact") },
-        {
-          href: `/${locale}/contact/partner`,
-          label: t("contactSubItems.beOurPartner"),
-        },
+
         {
           href: `/${locale}/contact/share-news`,
           label: t("contactSubItems.shareGoodNews"),
         },
       ],
     },
+    // {
+    //   label: t("multimedia"),
+    //   type: "dropdown",
+    //   items: [
+    //     {
+    //       href: `/${locale}/multimedia/mariam-videos`,
+    //       label: t("multimediaSubItems.mariamVideos"),
+    //     },
+    //   ],
+    // },
     {
-      label: t("multimedia"),
+      href: `/${locale}/mediaPresence`,
+      label: t("mediaPresence"),
+      type: "link",
+    },
+    {
+      href: `/${locale}/workshops`,
+      label: t("opportunitiesSubItems.workshops"),
+      type: "link",
+    },
+
+    {
+      href: `/${locale}/goodIntern`,
+      label: t("opportunitiesSubItems.theGoodIntern"),
+      type: "link",
+    },
+    {
+      label: t("aboutSubItems.partners"),
       type: "dropdown",
       items: [
         {
-          href: `/${locale}/multimedia/mariam-videos`,
-          label: t("multimediaSubItems.mariamVideos"),
+          href: `/${locale}/about/partners`,
+          label: t("aboutSubItems.partners"),
+        },
+
+        {
+          href: `/${locale}/contact/partner`,
+          label: t("contactSubItems.beOurPartner"),
         },
       ],
     },
@@ -377,13 +406,13 @@ export function Navigation({
             ) : (
               <div className="hidden sm:flex items-center space-x-2 rtl:space-x-reverse">
                 <Button variant="ghost" asChild>
-                  <Link href={`/${locale}/login`}>{t("login")}</Link>
+                  <Link href={`/${locale}/auth/login`}>{t("login")}</Link>
                 </Button>
                 <Button
                   asChild
                   className="button-glow bg-gradient-to-r from-hot-pink to-bright-yellow hover:shadow-lg"
                 >
-                  <Link href={`/${locale}/signup`}>{t("signup")}</Link>
+                  <Link href={`/${locale}/auth/signup`}>{t("signup")}</Link>
                 </Button>
               </div>
             )}
@@ -498,13 +527,13 @@ export function Navigation({
               {!isLoggedIn && (
                 <div className="flex flex-col space-y-2 pt-4 border-t">
                   <Button variant="ghost" asChild className="justify-start">
-                    <Link href={`/${locale}/login`}>{t("login")}</Link>
+                    <Link href={`/${locale}/auth/login`}>{t("login")}</Link>
                   </Button>
                   <Button
                     asChild
                     className="button-glow bg-gradient-to-r from-hot-pink to-bright-yellow"
                   >
-                    <Link href={`/${locale}/signup`}>{t("signup")}</Link>
+                    <Link href={`/${locale}/auth/signup`}>{t("signup")}</Link>
                   </Button>
                 </div>
               )}

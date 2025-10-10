@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import Hero from "./sections/Hero";
 import Quote from "./components/Quote";
 import ArticlesSection from "./sections/ArticlesSection";
+import HeroGif from "./sections/HeroGif";
 
 export const metadata: Metadata = {
   title: "The Good News - Discover Stories That Matter",
@@ -20,13 +21,13 @@ export default function HomePage() {
     <div className="min-h-screen bg-cream">
       {/* <Navigation isLoggedIn={isLoggedIn} userRole={userRole} /> */}
       <main>
-        <Hero />
+        {/* <Hero /> */}
+        <HeroGif />
         <Quote />
         <ArticlesSection />
         {/* <HeroSection /> */}
         {/* <FeaturesSection /> */}
       </main>
-      <Footer />
     </div>
   );
 }

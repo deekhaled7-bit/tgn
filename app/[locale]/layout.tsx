@@ -5,7 +5,7 @@ import { locales } from "@/i18n";
 import { Metadata, Viewport } from "next";
 import { Navigation } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeScript } from "@/components/theme-script";
+import { Footer } from "@/components/footer";
 
 type Props = {
   children: React.ReactNode;
@@ -47,28 +47,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   const isRTL = locale === "ar";
   const isLoggedIn = false;
   const userRole = "user" as const;
-  
+
   // Apply appropriate font based on locale
   const fontClass = locale === "ar" ? "font-arabic" : "font-english";
-  
+
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
-      <head>
-        <ThemeScript />
-      </head>
-      <body className={fontClass} suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <NextIntlClientProvider messages={messages}>
+        <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
+        {children}
+        <Footer />
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }
