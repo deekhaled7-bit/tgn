@@ -7,6 +7,8 @@ import Hero from "./sections/Hero";
 import Quote from "./components/Quote";
 import ArticlesSection from "./sections/ArticlesSection";
 import HeroGif from "./sections/HeroGif";
+import Testimonials from "./sections/testomonials/Testimonials";
+import Billion from "./sections/Billion";
 
 export const metadata: Metadata = {
   title: "The Good News - Discover Stories That Matter",
@@ -18,13 +20,15 @@ export default function HomePage() {
   // In a real app, this would come from authentication context
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-cream overflow-hidden">
       {/* <Navigation isLoggedIn={isLoggedIn} userRole={userRole} /> */}
       <main>
         {/* <Hero /> */}
         <HeroGif />
         <Quote />
         <ArticlesSection />
+        <Testimonials />
+        <Billion />
         {/* <HeroSection /> */}
         {/* <FeaturesSection /> */}
       </main>

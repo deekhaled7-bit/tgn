@@ -1,4 +1,27 @@
 {
+  "billion": {
+    "title": "Our Good Stories",
+    "newsItems": [
+      {
+        "title": "Dubai's content creation summit could shape the future, experts say"
+      },
+      {
+        "title": "Abu Dhabi's Shorooq to invest $5m in two Content Creation Ventures"
+      },
+      {
+        "title": "Dubai Launches Ambitious Content Creator Hub to Attract Global Digital Talent"
+      },
+      {
+        "title": "1 Billion Followers Summit attracts top creators and brands"
+      },
+      {
+        "title": "Content creators debate brand deals at major industry event"
+      },
+      {
+        "title": "The National News features rising content creators"
+      }
+    ]
+  },
   "nav": {
     "home": "Home",
     "mediaPresence": "Media Presence",
@@ -167,7 +190,7 @@
   "footer": {
     "brand": {
       "name": "The Good News",
-      "description": "Discover stories that matter, insights that inspire. Join our community of readers sharing positive stories from around the world."
+      "description": "Launched in 2020, TGN is the leading positive news platform in the Arab World with a community of 300K members. Our mission is to amplify positive news stories relevant to Arab youth and organizations making a difference in their communities."
     },
     "quickLinks": {
       "title": "Quick Links",
@@ -191,15 +214,19 @@
       "subscribe": "Subscribe"
     },
     "bottom": {
-      "copyright": "© {year} The Good News. All rights reserved.",
+      "copyright": "© {year} The Good Media Group. All rights reserved.",
       "madeWith": "Made with",
-      "by": "by The Good News Team"
+      "by": "by THE GOOD NEWS TEAM"
     }
   },
   "notFound": {
     "title": "Page Not Found",
-    "subtitle": "This page is coming soon. Please check back later.",
-    "goHome": "Go to Home"
+    "subtitle": "This page is coming soon. Check back later.",
+    "goHome": "Go Home"
+  },
+  "testimonials": {
+    "title": "messages from our besties",
+    "trustedBy": "Trusted by 300,000+ readers"
   },
   "team": {
     "title": "OUR TEAM",
@@ -265,6 +292,30 @@
     "message": "Message",
     "sendMessage": "Send Message"
   },
+  "partner": {
+    "title": "Be Our Partner",
+    "subtitle": "Let's collaborate to create something amazing",
+    "form": {
+      "businessName": "Business Name",
+      "industry": "Industry",
+      "howCollaborate": "How do you think we can collaborate?",
+      "campaignDetails": "Campaign Details",
+      "campaignDetailsHint": "If there is a specific campaign of yours that you'd like, please specify it's details (campaign start date, objective, if there is an event, etc)",
+      "socialMedia": "Your Social media accounts",
+      "contactName": "Contact Person Name",
+      "contactNumber": "Contact person number",
+      "contactEmail": "Contact person email",
+      "contactMethod": "How would you like us to contact you?",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "submit": "Submit",
+      "clear": "Clear form",
+      "successMessage": "Your partnership request has been submitted successfully! We'll get back to you soon.",
+      "errorMessage": "There was an error submitting your form. Please try again.",
+      "placeholder": "Your answer"
+    }
+  },
   "contactform": {
     "title": "Contact Us",
     "subtitle": "We'd love to hear from you",
@@ -284,6 +335,18 @@
       "content3": "From everyday heroes changing our lives, to creative initiatives and stories of social impact — The Good News exists to always remind you that there is still goodness and positive news waiting to be told.",
       "missionTitle": "OUR MISSION",
       "missionContent": "Our mission is to transform the media landscape by focusing on stories that celebrate human achievement, kindness, and progress. In a world often dominated by negative news, we strive to provide a balanced perspective by showcasing the good that exists all around us. We believe that positive journalism can inspire action, foster connection, and contribute to a more hopeful society."
+    }
+  },
+  "shareNews": {
+    "title": "SHARE YOUR GOOD NEWS",
+    "subtitle": "HELP US SPREAD POSITIVITY",
+    "form": {
+      "story": "What is the good story that you'd like us to feature?",
+      "attachment": "Can you add any material photo/ video? (Ideally video in high quality)",
+      "uploadInstructions": "Click or drag files to upload (photos or videos)",
+      "name": "Name",
+      "email": "Email",
+      "submit": "Submit"
     }
   }
 }

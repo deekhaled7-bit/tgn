@@ -263,7 +263,7 @@ export function Navigation({
         scrolled ? "backdrop-blur-md bg-background/60" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto ">
+      <div dir={isRTL ? "rtl" : "ltr"} className="container mx-auto ">
         <div className="flex items-center px-4 sm:px-6 lg:px-8 justify-between">
           {/* Logo */}
           <Link
@@ -287,7 +287,7 @@ export function Navigation({
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+          <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse ">
             {navItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.type === "link" ? (
@@ -343,20 +343,6 @@ export function Navigation({
               </div>
             ))}
           </nav>
-
-          {/* Search Bar */}
-          {/* <div className="hidden lg:flex items-center max-w-sm w-full mx-6">
-            <div className="relative w-full">
-              <Search className="absolute left-3 rtl:left-auto rtl:right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                type="search"
-                placeholder={t("search")}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 rtl:pl-4 rtl:pr-10 bg-muted/50 border-0 focus:bg-background transition-colors"
-              />
-            </div>
-          </div> */}
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4 rtl:space-x-reverse">

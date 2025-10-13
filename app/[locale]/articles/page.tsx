@@ -104,8 +104,6 @@ export default function ArticlesPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -52,13 +52,17 @@ export function Footer() {
     { href: `/${locale}/privacy`, label: t("quickLinks.privacy") },
     { href: `/${locale}/terms`, label: t("quickLinks.terms") },
   ];
+  const isRTL = locale === "ar";
 
   return (
     <footer className="bg-gradient-to-br from-cream/20 to-hot-pink/10 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          dir={isRTL ? "rtl" : "ltr"}
+          className="grid grid-cols-1 items-start justify-center md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div dir="" className="space-y-4">
             <Link
               href={`/${locale}`}
               className="flex items-center justify-center space-x-2 rtl:space-x-reverse"

@@ -117,7 +117,7 @@ export default function StoryPage() {
               }`}
             >
               <Image
-                src="/wiig/missionSquare.gif"
+                src="/wiig/mission4.gif"
                 alt="Our Mission"
                 width={300}
                 height={200}
