@@ -74,7 +74,6 @@ const Billion = () => {
       imageUrl: `/ourGoodNews/blind.png`,
       flex: 5,
     },
-
     {
       id: 5,
       url: "https://www.instagram.com/thegoodnews.me/reel/DPTbIfcjAAg/",
@@ -93,7 +92,6 @@ const Billion = () => {
       imageUrl: `/ourGoodNews/france.png`,
       flex: 5,
     },
-
     {
       id: 8,
       url: "https://www.instagram.com/p/DOvKT_eiOCt/",
@@ -102,6 +100,61 @@ const Billion = () => {
     },
     {
       id: 11,
+      url: "https://www.instagram.com/p/DM5oZiesAfL/",
+      imageUrl: `/ourGoodNews/cars.png`,
+      flex: 5,
+    },
+    // Duplicated items with different IDs
+    {
+      id: 12,
+      url: "https://www.instagram.com/reel/DMLE6RlTjNZ/",
+      imageUrl: `/ourGoodNews/aswan.png`,
+      flex: 5,
+    },
+    {
+      id: 13,
+      url: "https://www.instagram.com/reel/DNigRWMMM-D/",
+      imageUrl: `/ourGoodNews/bread.png`,
+      flex: 4,
+    },
+    {
+      id: 14,
+      url: "https://www.instagram.com/reel/DNQU6lTNidI/",
+      imageUrl: `/ourGoodNews/socks.png`,
+      flex: 6,
+    },
+    {
+      id: 15,
+      url: "https://www.instagram.com/reel/DOdRHAQjMgs/",
+      imageUrl: `/ourGoodNews/blind.png`,
+      flex: 5,
+    },
+    {
+      id: 16,
+      url: "https://www.instagram.com/thegoodnews.me/reel/DPTbIfcjAAg/",
+      imageUrl: `/ourGoodNews/luxor.png`,
+      flex: 6,
+    },
+    {
+      id: 17,
+      url: "https://www.instagram.com/p/DPESkeXDLDQ/?img_index=1",
+      imageUrl: `/ourGoodNews/genz.png`,
+      flex: 1,
+    },
+    {
+      id: 18,
+      url: "https://www.instagram.com/p/DO6rbfRjGNQ/",
+      imageUrl: `/ourGoodNews/france.png`,
+      flex: 5,
+    },
+    {
+      id: 19,
+      url: "https://www.instagram.com/p/DOvKT_eiOCt/",
+      imageUrl: `/ourGoodNews/strange.png`,
+      flex: 3,
+    },
+    {
+      id: 20,
       url: "https://www.instagram.com/p/DM5oZiesAfL/",
       imageUrl: `/ourGoodNews/cars.png`,
       flex: 5,
@@ -177,7 +230,7 @@ const Billion = () => {
   const columns = distributeItemsIntoColumns();
 
   return (
-    <section className="py-16 bg-cream lg:px-10 overflow-hidden">
+    <section className="relative py-16 bg-cream lg:px-10 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -190,69 +243,83 @@ const Billion = () => {
         >
           {t("title")}
         </motion.h2>
+        <div className="relative">
+          <div
+            className="absolute top-0 left-0 right-0 md:h-[25vh] h-[10vh] z-10 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(249, 245, 237, 1) 0%, rgba(249, 245, 237, 0) 100%)",
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-0 left-0 right-0 h-[10vh] z-10 pointer-events-none" 
+            style={{ 
+              background: 'linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)'
+            }}
+          ></div>
 
-        {/* Scrollable container */}
-        <div
-          ref={scrollRef}
-          className="h-[600px] overflow-y-scroll scrollbar-hide"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            willChange: "scroll-position",
-          }}
-        >
-          <div className="block md:hidden">
-            {/* 2 column layout for sm screens */}
-            <div className="flex gap-4">
-              {columns.sm.map((column, colIndex) => (
-                <div key={colIndex} className="flex-1 flex flex-col gap-4">
-                  {column.map((item: any) => (
-                    <Link
-                      key={item.id}
-                      href={item.url}
-                      className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150 ${getHeightClass(
-                        item.flex
-                      )}`}
-                    >
-                      <img
-                        src={item.imageUrl}
-                        alt={`News item ${item.id}`}
-                        className="w-full h-full object-cove absolute inset-0"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ))}
+          {/* Scrollable container */}
+          <div
+            ref={scrollRef}
+            className="h-[600px] relative overflow-y-scroll scrollbar-hide"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              willChange: "scroll-position",
+            }}
+          >
+            <div className="block md:hidden">
+              {/* 2 column layout for sm screens */}
+              <div className="flex gap-4">
+                {columns.sm.map((column, colIndex) => (
+                  <div key={colIndex} className="flex-1 flex flex-col gap-4">
+                    {column.map((item: any) => (
+                      <Link
+                        key={item.id}
+                        href={item.url}
+                        className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150 ${getHeightClass(
+                          item.flex
+                        )}`}
+                      >
+                        <img
+                          src={item.imageUrl}
+                          alt={`News item ${item.id}`}
+                          className="w-full h-full object-cove absolute inset-0"
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="hidden md:block ">
-            {/* 3 column layout for md screens */}
-            <div className="flex gap-4">
-              {columns.md.map((column, colIndex) => (
-                <div key={colIndex} className="flex-1 flex flex-col gap-4">
-                  {column.map((item: any) => (
-                    <Link
-                      key={item.id}
-                      href={item.url}
-                      className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150 ${getHeightClass(
-                        item.flex
-                      )}`}
-                    >
-                      <img
-                        src={item.imageUrl}
-                        alt={`News item ${item.id}`}
-                        className="w-full h-full object-cove absolute inset-0"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ))}
+            <div className="hidden md:block ">
+              {/* 3 column layout for md screens */}
+              <div className="flex gap-4">
+                {columns.md.map((column, colIndex) => (
+                  <div key={colIndex} className="flex-1 flex flex-col gap-4">
+                    {column.map((item: any) => (
+                      <Link
+                        key={item.id}
+                        href={item.url}
+                        className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150 ${getHeightClass(
+                          item.flex
+                        )}`}
+                      >
+                        <img
+                          src={item.imageUrl}
+                          alt={`News item ${item.id}`}
+                          className="w-full h-full object-cove absolute inset-0"
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* 4 column layout for lg screens */}
-          {/* <div className="hidden lg:block">
+            {/* 4 column layout for lg screens */}
+            {/* <div className="hidden lg:block">
             <div className="flex gap-4">
               {columns.lg.map((column, colIndex) => (
                 <div key={colIndex} className="flex-1 flex flex-col gap-4">
@@ -276,9 +343,9 @@ const Billion = () => {
             </div>
           </div> */}
 
-          {/* Duplicated items for seamless scrolling */}
-          {/* 1 column layout for xs screens (duplicated) */}
-          {/* <div className="block sm:hidden mt-4">
+            {/* Duplicated items for seamless scrolling */}
+            {/* 1 column layout for xs screens (duplicated) */}
+            {/* <div className="block sm:hidden mt-4">
             <div className="flex flex-col gap-4">
               {newsItems.map((item) => (
                 <Link
@@ -298,67 +365,67 @@ const Billion = () => {
             </div>
           </div> */}
 
-          <div className=" md:hidden mt-4">
-            {/* 2 column layout for sm screens (duplicated) */}
-            <div className="flex gap-4">
-              {columns.sm.map((column, colIndex) => (
-                <div
-                  key={`dup-${colIndex}`}
-                  className="flex-1 flex flex-col gap-4"
-                >
-                  {column.map((item: any) => (
-                    <Link
-                      key={`dup-${item.id}`}
-                      href={item.url}
-                      className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150  ${getHeightClass(
-                        item.flex
-                      )}`}
-                    >
-                      {/* <div className="h-[200px] bg-gray-200 flex items-center justify-center">
+            <div className=" md:hidden mt-4">
+              {/* 2 column layout for sm screens (duplicated) */}
+              <div className="flex gap-4">
+                {columns.sm.map((column, colIndex) => (
+                  <div
+                    key={`dup-${colIndex}`}
+                    className="flex-1 flex flex-col gap-4"
+                  >
+                    {column.map((item: any) => (
+                      <Link
+                        key={`dup-${item.id}`}
+                        href={item.url}
+                        className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden transition-transform duration-150  ${getHeightClass(
+                          item.flex
+                        )}`}
+                      >
+                        {/* <div className="h-[200px] bg-gray-200 flex items-center justify-center">
                         <span className="text-gray-500">Image {item.id}</span>
                       </div> */}
-                      <img
-                        src={item.imageUrl}
-                        alt={`News item ${item.id}`}
-                        className="w-full h-full object-cove"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ))}
+                        <img
+                          src={item.imageUrl}
+                          alt={`News item ${item.id}`}
+                          className="w-full h-full object-cove"
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="hidden md:block  mt-4">
-            {/* 3 column layout for md screens (duplicated) */}
-            <div className="flex gap-4">
-              {columns.md.map((column, colIndex) => (
-                <div
-                  key={`dup-${colIndex}`}
-                  className="flex-1 flex flex-col gap-4"
-                >
-                  {column.map((item: any) => (
-                    <Link
-                      key={`dup-${item.id}`}
-                      href={item.url}
-                      className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 ${getHeightClass(
-                        item.flex
-                      )}`}
-                    >
-                      <img
-                        src={item.imageUrl}
-                        alt={`News item ${item.id}`}
-                        className="w-full h-full object-cove"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ))}
+            <div className="hidden md:block  mt-4">
+              {/* 3 column layout for md screens (duplicated) */}
+              <div className="flex gap-4">
+                {columns.md.map((column, colIndex) => (
+                  <div
+                    key={`dup-${colIndex}`}
+                    className="flex-1 flex flex-col gap-4"
+                  >
+                    {column.map((item: any) => (
+                      <Link
+                        key={`dup-${item.id}`}
+                        href={item.url}
+                        className={`w-full relative bg-gray-100 border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 ${getHeightClass(
+                          item.flex
+                        )}`}
+                      >
+                        <img
+                          src={item.imageUrl}
+                          alt={`News item ${item.id}`}
+                          className="w-full h-full object-cove"
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* 4 column layout for lg screens (duplicated) */}
-          {/* <div className="hidden lg:block mt-4">
+            {/* 4 column layout for lg screens (duplicated) */}
+            {/* <div className="hidden lg:block mt-4">
             <div className="flex gap-4">
               {columns.lg.map((column, colIndex) => (
                 <div
@@ -384,6 +451,7 @@ const Billion = () => {
               ))}
             </div>
           </div> */}
+          </div>
         </div>
       </div>
     </section>

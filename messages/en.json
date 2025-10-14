@@ -203,7 +203,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "email": "hello@thegoodnews.com",
+      "email": "contact@thegoodnews-me.com",
       "phone": "+1 (555) 123-4567",
       "address": "New York, NY 10001"
     },
@@ -225,7 +225,7 @@
     "goHome": "Go Home"
   },
   "testimonials": {
-    "title": "messages from our besties",
+    "title": "Messages from our besties",
     "trustedBy": "Trusted by 300,000+ readers"
   },
   "team": {
@@ -348,5 +348,75 @@
       "email": "Email",
       "submit": "Submit"
     }
+  },
+  "workshops": {
+    "title": "Workshops",
+    "subtitle": "THE GOOD ACADEMY",
+    "introduction": "Born from the legacy of THE GOOD NEWS (TGN), the Arab world's leading platform for positive stories, The Good Academy (TGA) was created to inspire and empower the next generation of storytellers. With a thriving community of over 300,000 members, we believe in the transformative power of stories to spark hope, celebrate achievements, and drive meaningful change.",
+    "objectivesTitle": "OUR OBJECTIVES",
+    "equip": "Equip",
+    "equipDescription": "Arab youth with the most up-to-date storytelling tools and techniques to craft compelling narratives.",
+    "empower": "Empower",
+    "empowerDescription": "A new generation of creators to amplify the voices and stories of the Arab world that underscores our boundless potential.",
+    "inspire": "Inspire",
+    "inspireDescription": "Participants through a vibrant network of like-minded storytellers, mentors, and change-makers.",
+    "tracksTitle": "WORKSHOP TRACKS",
+    "contentCreationTitle": "Content Creation",
+    "foundationTitle": "Foundation and Purpose",
+    "foundationDescription": "Define your \"why,\" identify your niche, and understand what drives your content, setting you apart from others.",
+    "skillsTitle": "Skills and Tools",
+    "skillsDescription": "Master storytelling techniques, filming basics, and use essential equipment (software and hardware) to enhance content quality.",
+    "audienceTitle": "Audience and Community",
+    "audienceDescription": "Develop audience personas, engage effectively on social media, create with integrity and values, and build a sustainable, loyal community.",
+    "businessTitle": "From Content to Business",
+    "partnershipsTitle": "Strategic Partnerships",
+    "partnershipsDescription": "Identify and choose partners aligned with your brand, mission, and values, focusing on relationships that go beyond financial gains.",
+    "pitchingTitle": "Authentic Pitching",
+    "pitchingDescription": "Learn to craft standout business pitches and sustain audience trust through authenticity in partnerships.",
+    "monetizationTitle": "Monetization and Income",
+    "monetizationDescription": "Explore diverse monetization streams and strategies for consistent, effortless cash flow."
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "COLLABORATING FOR IMPACT",
+    "description": "We are proud to work with organizations that share our vision for positive change and impactful storytelling. Our partners help us amplify good news and create meaningful content across various sectors.",
+    "categories": {
+      "humanitarian": "Humanitarian & NGOs",
+      "events": "Events",
+      "governate": "Government",
+      "privateSector": "Private Sector"
+    },
+    "caseStudies": {
+      "title": "Case Studies",
+      "description": "Explore how our partnerships have created meaningful impact and positive change.",
+      "readMore": "Read More",
+      "case1": {
+        "title": "Education Initiative",
+        "description": "Partnering with local schools to provide educational resources and support for underprivileged students."
+      },
+      "case2": {
+        "title": "Healthcare Access",
+        "description": "Working with medical organizations to improve healthcare access in remote communities."
+      },
+      "case3": {
+        "title": "Environmental Conservation",
+        "description": "Collaborating on initiatives to protect natural resources and promote sustainable practices."
+      },
+      "case4": {
+        "title": "Youth Empowerment",
+        "description": "Creating opportunities for young people to develop skills and become community leaders."
+      },
+      "case5": {
+        "title": "Cultural Preservation",
+        "description": "Supporting efforts to preserve cultural heritage and traditional practices."
+      },
+      "case6": {
+        "title": "Digital Inclusion",
+        "description": "Bridging the digital divide through technology access and digital literacy programs."
+      }
+    },
+    "becomePartner": "Become Our Partner",
+    "becomePartnerDescription": "Join our network of partners and collaborate with us to create impactful content and share positive stories.",
+    "becomePartnerButton": "Partner With Us"
   }
 }
