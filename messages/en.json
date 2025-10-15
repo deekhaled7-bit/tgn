@@ -426,5 +426,11 @@
     "becomePartner": "Become a Partner",
     "becomePartnerDescription": "Join our network of partners and collaborate with us to create impactful content and share positive stories.",
     "becomePartnerButton": "Partner with Us"
+  },
+  "mediaPresence": {
+    "title": "Media Presence",
+    "subtitle": "The Good News in the Media",
+    "featuredOnLabel": "FEATURED ON",
+    "interviewsLabel": "INTERVIEWS"
   }
 }
