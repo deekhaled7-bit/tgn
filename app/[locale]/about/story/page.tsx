@@ -94,11 +94,7 @@ export default function StoryPage() {
           </h2>
 
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-            <div
-              className={`w-full md:w-1/2 ${
-                isRTL ? "md:order-2" : "md:order-1"
-              }`}
-            >
+            <div className={`w-full md:w-1/2 `}>
               <p
                 className={`text-lg ${
                   isRTL ? "font-arabic" : "font-english"

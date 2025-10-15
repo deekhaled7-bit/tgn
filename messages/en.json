@@ -386,37 +386,45 @@
       "governate": "Government",
       "privateSector": "Private Sector"
     },
+    "caseStudiesTitle": "SUCCESSFUL CASE STUDIES",
     "caseStudies": {
       "title": "Case Studies",
       "description": "Explore how our partnerships have created meaningful impact and positive change.",
       "readMore": "Read More",
       "case1": {
-        "title": "Education Initiative",
-        "description": "Partnering with local schools to provide educational resources and support for underprivileged students."
+        "category": "GOVERNMENT ENDORSEMENT",
+        "description": "TGN proudly serves as the digital arm of the Egyptian Ministry of Youth & Sports dedicated to amplifying governmental efforts related to Egyptian youth. Through innovative digital initiatives and strategic online engagement, TGN enhances the reach and impact of programs aimed at empowering and supporting the youth across Egypt."
       },
       "case2": {
-        "title": "Healthcare Access",
-        "description": "Working with medical organizations to improve healthcare access in remote communities."
+        "category": "HUMANIZING BRANDS",
+        "description": "After successfully launching a targeted campaign featuring Egyptian Olympians, Palm Hills discovered a promising collaboration opportunity with THE GOOD NEWS a marketing mix that combines reels, quick news, and stories. The campaign's debut video generated over 700K views, with the overall metrics reaching an impressive 3M+ in total reach.",
+        "stats": {
+          "views": "700K",
+          "totalReach": "3M+"
+        }
       },
       "case3": {
-        "title": "Environmental Conservation",
-        "description": "Collaborating on initiatives to protect natural resources and promote sustainable practices."
+        "category": "THE POWER OF STRATIGITIC CONTENT",
+        "description": "Our partnership with Yalla Success was a perfect reflection of TGN's commitment of enabling real-world opportunities. Together, we launched a focused digital campaign aimed at aspiring female entrepreneurs across Egypt and the region. Through our storytelling approach we reached over 200,000 young people, sparking awareness and action. The campaign translated into 200+ program applications, proving that digital visibility, when built on trust and community, drives tangible results."
       },
       "case4": {
-        "title": "Youth Empowerment",
-        "description": "Creating opportunities for young people to develop skills and become community leaders."
+        "category": "RIGHT STORY, RIGHT TIME",
+        "title": "Partnering with local NGOs to create sustainable community development programs",
+        "description": "Mountain View had a beautiful internal story, a piece of good news where they supported a young entrepreneur in their community. They could've gone mass. They could've gone overboard. But instead, they went niche, smart, and targeted, and the organic results spoke for themselves. Rather than blasting the story to every news agency, they chose the right home for positive storytelling in the region: THE GOOD NEWS."
       },
       "case5": {
-        "title": "Cultural Preservation",
-        "description": "Supporting efforts to preserve cultural heritage and traditional practices."
+        "category": "INTERNATIONAL RECOGNITION",
+        "title": "Partnering with local NGOs to create sustainable community development programs",
+        "description": "TGN's strategic collaboration with COP28 for the launch of the International Youth Climate Delegate Program significantly boosted youth engagement in Egypt. Leveraging its position as the exclusive Arab/Egyptian platform endorsed by COP28, TGN successfully drove participation, resulting in Egypt topping the list with over 1400 applications out of 11,000 globally. Notably, the endorsement from H.E. Shamma Al Mazrui, the UAE Minister of Community Development and COP28 Youth Climate Champion, added credibility and visibility to the initiative, amplifying its impact."
       },
       "case6": {
-        "title": "Digital Inclusion",
-        "description": "Bridging the digital divide through technology access and digital literacy programs."
+        "category": "THE POWER OF COMMUNITY",
+        "title": "Partnering with local NGOs to create sustainable community development programs",
+        "description": "As TGN is one of the most trusted platforms for youth in the Arab region, our retention rates for our collaboration with the Arab Youth Center were beyond impressive. Their news was the launch of the 5th edition of their program, the Young Arab Media Leaders, and of 50 selected members, 30% said they knew about the opportunity from TGN which showcases TGN's credibility and reach to younger audiences."
       }
     },
-    "becomePartner": "Become Our Partner",
+    "becomePartner": "Become a Partner",
     "becomePartnerDescription": "Join our network of partners and collaborate with us to create impactful content and share positive stories.",
-    "becomePartnerButton": "Partner With Us"
+    "becomePartnerButton": "Partner with Us"
   }
 }

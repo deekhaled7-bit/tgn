@@ -440,9 +440,6 @@ export default function PartnersPage() {
   // Case Studies data
   interface CaseStudy {
     id: string;
-    category: string;
-    title?: string;
-    description: string;
     partnerLogo?: string;
     stats?: Array<{ label: string; value: string }>;
     mediaItems: MediaItem[];
@@ -451,9 +448,6 @@ export default function PartnersPage() {
   const caseStudies: CaseStudy[] = [
     {
       id: "case1",
-      category: "GOVERNMENT ENDORSEMENT",
-      description:
-        "TGN proudly serves as the digital arm of the Egyptian Ministry of Youth & Sports dedicated to amplifying governmental efforts related to Egyptian youth. Through innovative digital initiatives and strategic online engagement, TGN enhances the reach and impact of programs aimed at empowering and supporting the youth across Egypt.",
       partnerLogo: "/partners/governate/10016.png",
       mediaItems: [
         {
@@ -471,9 +465,6 @@ export default function PartnersPage() {
     },
     {
       id: "case2",
-      category: "HUMANIZING BRANDS",
-      description:
-        "After successfully launching a targeted campaign featuring Egyptian Olympians, Palm Hills discovered a promising collaboration opportunity with THE GOOD NEWS a marketing mix that combines reels, quick news, and stories. The campaign's debut video generated over 700K views, with the overall metrics reaching an impressive 3M+ in total reach.",
       partnerLogo: "/partners/private sector/10035.png",
       mediaItems: [
         {
@@ -495,9 +486,6 @@ export default function PartnersPage() {
     },
     {
       id: "case3",
-      category: "THE POWER OF STRATIGITIC CONTENT",
-      description:
-        "Our partnership with Yalla Success was a perfect reflection of TGN's commitment of enabling real-world opportunities. Together, we launched a focused digital campaign aimed at aspiring female entrepreneurs across Egypt and the region. Through our storytelling approach we reached over 200,000 young people, sparking awareness and action. The campaign translated into 200+ program applications, proving that digital visibility, when built on trust and community, drives tangible results.",
       partnerLogo: "/partners/yalla.png",
       mediaItems: [
         {
@@ -509,11 +497,6 @@ export default function PartnersPage() {
     },
     {
       id: "case4",
-      category: "Right STory, right time",
-      title:
-        "Partnering with local NGOs to create sustainable community development programs",
-      description:
-        "Mountain View had a beautiful internal story, a piece of good news where they supported a young entrepreneur in their community. They could've gone mass. They could've gone overboard. But instead, they went niche, smart, and targeted, and the organic results spoke for themselves. Rather than blasting the story to every news agency, they chose the right home for positive storytelling in the region: THE GOOD NEWS.",
       partnerLogo: "/partners/private sector/10033.png",
       mediaItems: [
         {
@@ -525,11 +508,6 @@ export default function PartnersPage() {
     },
     {
       id: "case5",
-      category: "INTERNATIONAL RECOGNITION",
-      title:
-        "Partnering with local NGOs to create sustainable community development programs",
-      description:
-        "TGN's strategic collaboration with COP28 for the launch of the International Youth Climate Delegate Program significantly boosted youth engagement in Egypt. Leveraging its position as the exclusive Arab/Egyptian platform endorsed by COP28, TGN successfully drove participation, resulting in Egypt topping the list with over 1400 applications out of 11,000 globally. Notably, the endorsement from H.E. Shamma Al Mazrui, the UAE Minister of Community Development and COP28 Youth Climate Champion, added credibility and visibility to the initiative, amplifying its impact.",
       partnerLogo: "/partners/Humanitarian & NGOs/10005.png",
       mediaItems: [
         {
@@ -541,11 +519,6 @@ export default function PartnersPage() {
     },
     {
       id: "case6",
-      category: "THE POWER OF COMMUNITY",
-      title:
-        "Partnering with local NGOs to create sustainable community development programs",
-      description:
-        "As TGN is one of the most trusted platforms for youth in the Arab region, our retention rates for our collaboration with the Arab Youth Center were beyond impressive. Their news was the launch of the 5th edition of their program, the Young Arab Media Leaders, and of 50 selected members, 30% said they knew about the opportunity from TGN which showcases TGN's credibility and reach to younger audiences.",
       partnerLogo: "/partners/Humanitarian & NGOs/10014.png",
       mediaItems: [
         {
@@ -610,6 +583,7 @@ export default function PartnersPage() {
               whileInView="show"
               viewport={{ once: true }}
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+              style={{ direction: isRTL ? "rtl" : "ltr" }}
             >
               {category.logos.map((logo) => (
                 <motion.div key={logo.id} variants={item}>
@@ -620,7 +594,7 @@ export default function PartnersPage() {
           </section>
         ))}
         <h2 className="text-4xl md:text-5xl font-bold text-hot-pink mb-2">
-          SUCCESSFUL CASE STUDIES
+          {t("caseStudiesTitle")}
         </h2>
         {/* Case Studies Section */}
         <section className="mb-16">
@@ -632,13 +606,20 @@ export default function PartnersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="mb-24 relative"
+              style={{ direction: isRTL ? "rtl" : "ltr" }}
             >
-              <div className="max-w-6xl mx-auto">
+              <div
+                className="max-w-6xl mx-auto"
+                style={{ direction: isRTL ? "rtl" : "ltr" }}
+              >
                 {/* Title Section */}
-                <div className="flex w-full justify-between">
-                  <div className="mb-8">
+                <div
+                  className={`flex  w-full justify-between`}
+                  style={{ direction: isRTL ? "rtl" : "ltr" }}
+                >
+                  <div className="mb-8 ">
                     <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                      {study.category}
+                      {t(`caseStudies.${study.id}.category`)}
                     </h3>
                     <div className="w-12 h-1 bg-black mb-8"></div>
                   </div>
@@ -655,28 +636,37 @@ export default function PartnersPage() {
                   )}
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                  className={`flex flex-col md:flex-row gap-8 items-start`}
+                  style={{ direction: isRTL ? "rtl" : "ltr" }}
+                >
                   <div className="md:w-1/2">
                     <p className="text-base md:text-lg text-gray-800 mb-6">
-                      {study.description}
+                      {t(`caseStudies.${study.id}.description`)}
                     </p>
 
                     {/* Stats for Palm Hills case study */}
                     {study.id === "case2" && study.stats && (
                       <div className="mt-4">
                         <p className="text-lg font-bold">
-                          The campaign&apos;s debut video generated over{" "}
+                          {locale === "en"
+                            ? "The campaign's debut video generated over "
+                            : "حقق فيديو إطلاق الحملة أكثر من "}
                           <span className="text-hot-pink">
-                            {study.stats[0].value} {study.stats[0].label}
+                            {t(`caseStudies.${study.id}.stats.views`)}
                           </span>
-                          ,
+                          {locale === "en" ? "," : "،"}
                         </p>
                         <p className="text-lg font-bold">
-                          with the overall metrics reaching an impressive{" "}
+                          {locale === "en"
+                            ? "with the overall metrics reaching an impressive "
+                            : "مع وصول المقاييس الإجمالية إلى "}
                           <span className="text-hot-pink">
-                            {study.stats[1].value} in {study.stats[1].label}
+                            {t(`caseStudies.${study.id}.stats.totalReach`)}
                           </span>
-                          .
+                          {locale === "en"
+                            ? " in total reach."
+                            : " في الوصول الإجمالي."}
                         </p>
                       </div>
                     )}
