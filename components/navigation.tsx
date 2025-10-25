@@ -201,7 +201,7 @@ export function Navigation({
         //   label: t("aboutSubItems.partners"),
         // },
         {
-          href: `/${locale}/about/media`,
+          href: `/${locale}/about/mediaPresence`,
           label: t("aboutSubItems.mediaPresence"),
         },
       ],

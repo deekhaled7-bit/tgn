@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Newsletter = () => {
-  const t = useTranslations("newsletter");
+  const t = useTranslations("workshops.newsletters");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const [email, setEmail] = useState("");
@@ -53,7 +53,7 @@ const Newsletter = () => {
                   isRTL ? "font-arabic" : "font-english"
                 }`}
               >
-                {t("subtitle")}
+                {t("subTitle")}
               </p>
               <div className="relative w-20 h-20">
                 <Image

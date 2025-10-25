@@ -30,7 +30,6 @@ export default function HomePage() {
         <ArticlesSection />
         <Testimonials />
         <Billion />
-        <Newsletter />
 
         {/* <HeroSection /> */}
         {/* <FeaturesSection /> */}

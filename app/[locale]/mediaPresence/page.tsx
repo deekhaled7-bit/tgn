@@ -100,6 +100,11 @@ export default function MediaPresencePage() {
       src: "/logos/media presence/what women want.jpg",
       link: "https://whatwomenwant-mag.com/",
     },
+    {
+      name: "Dubai tv",
+      src: "/logos/media presence/dubai-tv.jpg",
+      link: "https://www.facebook.com/DubaiTV/?locale=ar_AR",
+    },
   ];
 
   return (
@@ -123,13 +128,13 @@ export default function MediaPresencePage() {
           >
             {t("title")}
           </div>
-          <div
+          {/* <div
             className={`text-2xl md:text-3xl font-bold mt-3 ${
               isRTL ? "font-arabic-subheading" : "font-english-subheading"
             } text-carbon`}
           >
             {t("subtitle")}
-          </div>
+          </div> */}
           <span className="inline-block mt-2 text-hot-pink font-bold tracking-wide">
             {t("featuredOnLabel")}
           </span>

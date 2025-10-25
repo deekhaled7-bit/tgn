@@ -100,7 +100,7 @@ const Testimonials = () => {
           alt="THE GOOD NEWS"
           className="w-64 h-64 object-contain "
         />
-        <div className="flex items-center gap-2 mb-2">
+        {/* <div className="flex items-center gap-2 mb-2">
           <span
             className={`text-carbon/90 text-base font-medium ${
               isRTL ? "font-arabic-body" : "font-english-body"
@@ -108,7 +108,7 @@ const Testimonials = () => {
           >
             {t("trustedBy")}
           </span>
-        </div>
+        </div> */}
 
         {/* <p
           className={`text-lg text-carbon/90 text-center max-w-xl ${

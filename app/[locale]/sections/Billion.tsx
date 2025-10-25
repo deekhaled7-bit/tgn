@@ -60,7 +60,7 @@ const Billion = () => {
       id: 2,
       url: "https://www.instagram.com/reel/DNigRWMMM-D/",
       imageUrl: `/ourGoodNews/bread.png`,
-      flex: 4,
+      flex: 5,
     },
     {
       id: 3,
@@ -80,24 +80,24 @@ const Billion = () => {
       imageUrl: `/ourGoodNews/luxor.png`,
       flex: 6,
     },
-    {
-      id: 6,
-      url: "https://www.instagram.com/p/DPESkeXDLDQ/?img_index=1",
-      imageUrl: `/ourGoodNews/genz.png`,
-      flex: 1,
-    },
+    // {
+    //   id: 6,
+    //   url: "https://www.instagram.com/p/DPESkeXDLDQ/?img_index=1",
+    //   imageUrl: `/ourGoodNews/genz.png`,
+    //   flex: 1,
+    // },
     {
       id: 7,
       url: "https://www.instagram.com/p/DO6rbfRjGNQ/",
       imageUrl: `/ourGoodNews/france.png`,
       flex: 5,
     },
-    {
-      id: 8,
-      url: "https://www.instagram.com/p/DOvKT_eiOCt/",
-      imageUrl: `/ourGoodNews/strange.png`,
-      flex: 3,
-    },
+    // {
+    //   id: 8,
+    //   url: "https://www.instagram.com/p/DOvKT_eiOCt/",
+    //   imageUrl: `/ourGoodNews/strange.png`,
+    //   flex: 2,
+    // },
     {
       id: 11,
       url: "https://www.instagram.com/p/DM5oZiesAfL/",
@@ -115,7 +115,7 @@ const Billion = () => {
       id: 13,
       url: "https://www.instagram.com/reel/DNigRWMMM-D/",
       imageUrl: `/ourGoodNews/bread.png`,
-      flex: 4,
+      flex: 5,
     },
     {
       id: 14,
@@ -135,24 +135,24 @@ const Billion = () => {
       imageUrl: `/ourGoodNews/luxor.png`,
       flex: 6,
     },
-    {
-      id: 17,
-      url: "https://www.instagram.com/p/DPESkeXDLDQ/?img_index=1",
-      imageUrl: `/ourGoodNews/genz.png`,
-      flex: 1,
-    },
+    // {
+    //   id: 17,
+    //   url: "https://www.instagram.com/p/DPESkeXDLDQ/?img_index=1",
+    //   imageUrl: `/ourGoodNews/genz.png`,
+    //   flex: 1,
+    // },
     {
       id: 18,
       url: "https://www.instagram.com/p/DO6rbfRjGNQ/",
       imageUrl: `/ourGoodNews/france.png`,
       flex: 5,
     },
-    {
-      id: 19,
-      url: "https://www.instagram.com/p/DOvKT_eiOCt/",
-      imageUrl: `/ourGoodNews/strange.png`,
-      flex: 3,
-    },
+    // {
+    //   id: 19,
+    //   url: "https://www.instagram.com/p/DOvKT_eiOCt/",
+    //   imageUrl: `/ourGoodNews/strange.png`,
+    //   flex: 2,
+    // },
     {
       id: 20,
       url: "https://www.instagram.com/p/DM5oZiesAfL/",
@@ -251,10 +251,11 @@ const Billion = () => {
                 "linear-gradient(to bottom, rgba(249, 245, 237, 1) 0%, rgba(249, 245, 237, 0) 100%)",
             }}
           ></div>
-          <div 
-            className="absolute bottom-0 left-0 right-0 h-[10vh] z-10 pointer-events-none" 
-            style={{ 
-              background: 'linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)'
+          <div
+            className="absolute bottom-0 left-0 right-0 h-[10vh] z-10 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)",
             }}
           ></div>
 

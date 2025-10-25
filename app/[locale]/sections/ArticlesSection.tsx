@@ -41,8 +41,7 @@ const ArticlesSection = () => {
               isRTL ? "font-body-ar" : "font-body-en"
             }`}
           >
-            Discover stories that inspire, inform, and transform your
-            perspective on life
+            {t("subFeatured")}
           </p>
         </motion.div>
 

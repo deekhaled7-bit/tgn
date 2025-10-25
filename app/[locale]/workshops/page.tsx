@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
+import Newsletter from "../sections/Newsletter";
 
 export default function WorkshopsPage() {
   const t = useTranslations("workshops");
@@ -24,7 +25,7 @@ export default function WorkshopsPage() {
 
   return (
     <div
-      className={`px-6 md:px-10 lg:px-16 pb-12 md:pb-16 pt-20 md:pt-28 ${
+      className={`px-6 md:px-10 lg:px-16  pt-20 md:pt-28 ${
         isRTL ? "text-right" : "text-left"
       }`}
     >
@@ -279,6 +280,7 @@ export default function WorkshopsPage() {
             </motion.div>
           </motion.div>
         </div>
+        <Newsletter />
       </section>
     </div>
   );

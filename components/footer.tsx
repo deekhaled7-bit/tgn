@@ -123,16 +123,16 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 rtl:space-x-reverse text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-hot-pink" />
-                <span>{t("contact.email")}</span>
+                <span>info@thegoodnews-me.com</span>
               </div>
-              <div className="flex items-center space-x-3 rtl:space-x-reverse text-sm text-muted-foreground">
+              {/* <div className="flex items-center space-x-3 rtl:space-x-reverse text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-hot-pink" />
                 <span>{t("contact.phone")}</span>
               </div>
               <div className="flex items-center space-x-3 rtl:space-x-reverse text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-hot-pink" />
                 <span>{t("contact.address")}</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
