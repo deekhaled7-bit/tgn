@@ -9,9 +9,10 @@ import ArticlesSection from "./sections/ArticlesSection";
 import HeroGif from "./sections/HeroGif";
 import Testimonials from "./sections/testomonials/Testimonials";
 import Billion from "./sections/Billion";
+import Newsletter from "./sections/Newsletter";
 
 export const metadata: Metadata = {
-  title: "The Good News - Discover Stories That Matter",
+  title: "THE GOOD NEWS",
   description:
     "Join our community of readers sharing positive stories. Access exclusive content, premium articles, and connect with like-minded individuals.",
 };
@@ -22,13 +23,15 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-cream overflow-hidden">
       {/* <Navigation isLoggedIn={isLoggedIn} userRole={userRole} /> */}
-      <main>
+      <main className="">
         {/* <Hero /> */}
         <HeroGif />
         <Quote />
         <ArticlesSection />
         <Testimonials />
         <Billion />
+        <Newsletter />
+
         {/* <HeroSection /> */}
         {/* <FeaturesSection /> */}
       </main>

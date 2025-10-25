@@ -1,4 +1,12 @@
 {
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Wanna join our good movement? Subscribe to our good newsletter!",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Something went wrong. Please try again."
+  },
   "billion": {
     "title": "Our Good Stories",
     "newsItems": [
@@ -30,6 +38,7 @@
     "opportunities": "Opportunities",
     "about": "About",
     "contact": "Contact Us",
+    "involved": "Get Involved",
     "multimedia": "Multimedia",
     "login": "Login",
     "signup": "Sign Up",
@@ -37,6 +46,7 @@
     "dashboard": "Dashboard",
     "search": "Search articles...",
     "subscribe": "Subscribe",
+    "newsletter": "Newsletter",
     "newsSubItems": {
       "egyptNews": "Egypt News",
       "uaeNews": "UAE News",
@@ -77,12 +87,12 @@
   },
   "home": {
     "hero": {
-      "title": "Welcome to The Good News",
+      "title": "Welcome to THE GOOD NEWS",
       "subtitle": "Discover stories that matter, insights that inspire",
       "cta": "Explore Articles"
     },
     "features": {
-      "title": "Why Choose The Good News?",
+      "title": "Why Choose THE GOOD NEWS?",
       "exclusive": {
         "title": "Exclusive Content",
         "description": "Access premium articles and videos in The Good Project"
@@ -124,7 +134,7 @@
       "signUp": "Sign up here"
     },
     "signup": {
-      "title": "Join The Good News",
+      "title": "Join THE GOOD NEWS",
       "subtitle": "Create your account to get started",
       "name": "Full Name",
       "email": "Email",
@@ -185,11 +195,11 @@
     "previous": "Previous"
   },
   "quote": {
-    "inspirational": "same positivity, more places."
+    "inspirational": " “Hope is a good thing, and no good thing ever dies.” — The Shawshank Redemption"
   },
   "footer": {
     "brand": {
-      "name": "The Good News",
+      "name": "THE GOOD NEWS",
       "description": "Launched in 2020, TGN is the leading positive news platform in the Arab World with a community of 300K members. Our mission is to amplify positive news stories relevant to Arab youth and organizations making a difference in their communities."
     },
     "quickLinks": {
@@ -209,7 +219,7 @@
     },
     "newsletter": {
       "title": "Stay Updated",
-      "description": "Subscribe to our newsletter for the latest articles and exclusive content.",
+      "description": "Wanna join our good movement? Subscribe to our good newsletter!",
       "placeholder": "Enter your email",
       "subscribe": "Subscribe"
     },
@@ -226,7 +236,7 @@
   },
   "testimonials": {
     "title": "Messages from our besties",
-    "trustedBy": "Trusted by 300,000+ readers"
+    "trustedBy": "Trusted by millions of readers"
   },
   "team": {
     "title": "OUR TEAM",
@@ -330,9 +340,9 @@
   "about": {
     "story": {
       "title": "WHO WE ARE",
-      "content1": "The Good News is a digital media platform founded by Mariam Naoum in 2020. We are dedicated to sharing positive stories, highlighting inspiring individuals, and fostering a community centered around hope and optimism.",
+      "content1": "THE GOOD NEWS is a digital media platform founded by Mariam solika in 2020. We are dedicated to sharing positive stories, highlighting inspiring individuals, and fostering a community centered around hope and optimism.",
       "content2": "Mariam is a media professional with over 7 years of experience, a graduate of TV journalism, and a certified digital journalist from the European Commission in Belgium and the Arab Youth Center in the UAE. She previously worked as a Public Communications Lead at climate conferences COP27, COP28, and COP29.",
-      "content3": "From everyday heroes changing our lives, to creative initiatives and stories of social impact — The Good News exists to always remind you that there is still goodness and positive news waiting to be told.",
+      "content3": "From everyday heroes changing our lives, to creative initiatives and stories of social impact — THE GOOD NEWS exists to always remind you that there is still goodness and positive news waiting to be told.",
       "missionTitle": "OUR MISSION",
       "missionContent": "Our mission is to transform the media landscape by focusing on stories that celebrate human achievement, kindness, and progress. In a world often dominated by negative news, we strive to provide a balanced perspective by showcasing the good that exists all around us. We believe that positive journalism can inspire action, foster connection, and contribute to a more hopeful society."
     }
@@ -429,7 +439,7 @@
   },
   "mediaPresence": {
     "title": "Media Presence",
-    "subtitle": "The Good News in the Media",
+    "subtitle": "THE GOOD NEWS in the Media",
     "featuredOnLabel": "FEATURED ON",
     "interviewsLabel": "INTERVIEWS"
   }

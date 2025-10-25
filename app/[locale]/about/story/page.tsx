@@ -40,7 +40,7 @@ export default function StoryPage() {
             >
               <Image
                 src="/pictures/TGN_Profilepicture2.png"
-                alt="The Good News Profile"
+                alt="THE GOOD NEWS Profile"
                 width={300}
                 height={300}
                 className="rounded-lg shadow-lg"

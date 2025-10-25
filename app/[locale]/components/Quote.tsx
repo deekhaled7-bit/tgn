@@ -17,13 +17,17 @@ const Quote = () => {
         isRTL ? "text-right" : "text-left"
       }`}
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div
+        dir={isRTL ? "rtl" : "ltr"}
+        className="xl:max-w-4xl 2xl:max-w-6xl mx-auto text-center"
+      >
         <motion.blockquote
           ref={ref}
           initial={{ filter: "blur(20px)", opacity: 0 }}
           animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
           transition={{ duration: 1.2 }}
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-relaxed ${
+          style={{ lineHeight: "1.5em" }}
+          className={`text-2xl md:text-3xl lg:text-4xl font-bold text-cream tracking-wide ${
             isRTL ? "font-arabic-header" : "font-english-heading"
           }`}
         >

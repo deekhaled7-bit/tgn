@@ -11,15 +11,15 @@ import { headers } from "next/headers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Good News - Modern News & Blogging Platform",
+  title: "THE GOOD NEWS",
   description:
     "Discover stories that matter, insights that inspire. Join our community of readers sharing positive stories.",
   keywords: "news, blog, articles, community, subscription, exclusive content",
-  authors: [{ name: "The Good News Team" }],
+  authors: [{ name: "THE GOOD NEWS Team" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
-    title: "The Good News",
+    title: "THE GOOD NEWS",
     description: "Discover stories that matter, insights that inspire",
     type: "website",
     locale: "en_US",
@@ -42,11 +42,7 @@ export default async function RootLayout({
   const fontClass = locale === "ar" ? "font-arabic" : "font-english";
 
   return (
-    <html 
-      lang={locale} 
-      dir={isRTL ? "rtl" : "ltr"} 
-      suppressHydrationWarning
-    >
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>

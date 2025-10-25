@@ -178,7 +178,7 @@ export default function MediaPresencePage() {
         >
           <iframe
             src="https://www.youtube.com/embed/videoseries?list=PLYs-fHK8RjGzx8hWqkBaI8JvzPY054RNp"
-            title="The Good News Interviews"
+            title="THE GOOD NEWS Interviews"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

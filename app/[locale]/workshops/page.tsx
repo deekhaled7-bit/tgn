@@ -60,7 +60,7 @@ export default function WorkshopsPage() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <motion.p 
+          <motion.p
             variants={item}
             className={`text-lg md:text-xl leading-relaxed ${
               isRTL ? "font-arabic" : "font-english"
@@ -96,32 +96,47 @@ export default function WorkshopsPage() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <motion.div variants={item} className="bg-cream p-6 rounded-lg shadow-md">
-            <h3 className={`text-xl font-bold mb-3 text-hot-pink ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
-            }`}>
+          <motion.div
+            variants={item}
+            className="bg-cream p-6 rounded-lg shadow-md"
+          >
+            <h3
+              className={`text-xl font-bold mb-3 text-hot-pink ${
+                isRTL ? "font-arabic-subheading" : "font-english-subheading"
+              }`}
+            >
               {t("equip")}
             </h3>
             <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
               {t("equipDescription")}
             </p>
           </motion.div>
-          
-          <motion.div variants={item} className="bg-cream p-6 rounded-lg shadow-md">
-            <h3 className={`text-xl font-bold mb-3 text-hot-pink ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
-            }`}>
+
+          <motion.div
+            variants={item}
+            className="bg-cream p-6 rounded-lg shadow-md"
+          >
+            <h3
+              className={`text-xl font-bold mb-3 text-hot-pink ${
+                isRTL ? "font-arabic-subheading" : "font-english-subheading"
+              }`}
+            >
               {t("empower")}
             </h3>
             <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
               {t("empowerDescription")}
             </p>
           </motion.div>
-          
-          <motion.div variants={item} className="bg-cream p-6 rounded-lg shadow-md">
-            <h3 className={`text-xl font-bold mb-3 text-hot-pink ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
-            }`}>
+
+          <motion.div
+            variants={item}
+            className="bg-cream p-6 rounded-lg shadow-md"
+          >
+            <h3
+              className={`text-xl font-bold mb-3 text-hot-pink ${
+                isRTL ? "font-arabic-subheading" : "font-english-subheading"
+              }`}
+            >
               {t("inspire")}
             </h3>
             <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
@@ -132,7 +147,7 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Workshop Tracks Section */}
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto " dir={isRTL ? "rtl" : "ltr"}>
         <motion.div
           initial={{ opacity: 0, filter: "blur(20px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
@@ -158,7 +173,7 @@ export default function WorkshopsPage() {
             viewport={{ once: true }}
             className="bg-cream p-8 rounded-lg shadow-lg"
           >
-            <motion.h3 
+            <motion.h3
               variants={item}
               className={`text-2xl font-bold mb-6 text-hot-pink ${
                 isRTL ? "font-arabic-subheading" : "font-english-subheading"
@@ -166,33 +181,39 @@ export default function WorkshopsPage() {
             >
               {t("contentCreationTitle")}
             </motion.h3>
-            
+
             <motion.div variants={item} className="mb-6">
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("foundationTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
                 {t("foundationDescription")}
               </p>
             </motion.div>
-            
+
             <motion.div variants={item} className="mb-6">
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("skillsTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
                 {t("skillsDescription")}
               </p>
             </motion.div>
-            
+
             <motion.div variants={item}>
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("audienceTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
@@ -209,7 +230,7 @@ export default function WorkshopsPage() {
             viewport={{ once: true }}
             className="bg-cream p-8 rounded-lg shadow-lg"
           >
-            <motion.h3 
+            <motion.h3
               variants={item}
               className={`text-2xl font-bold mb-6 text-hot-pink ${
                 isRTL ? "font-arabic-subheading" : "font-english-subheading"
@@ -217,33 +238,39 @@ export default function WorkshopsPage() {
             >
               {t("businessTitle")}
             </motion.h3>
-            
+
             <motion.div variants={item} className="mb-6">
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("partnershipsTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
                 {t("partnershipsDescription")}
               </p>
             </motion.div>
-            
+
             <motion.div variants={item} className="mb-6">
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("pitchingTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>
                 {t("pitchingDescription")}
               </p>
             </motion.div>
-            
+
             <motion.div variants={item}>
-              <h4 className={`text-xl font-semibold mb-2 ${
-                isRTL ? "font-arabic-subheading" : "font-english-subheading"
-              }`}>
+              <h4
+                className={`text-xl font-semibold mb-2 ${
+                  isRTL ? "font-arabic-subheading" : "font-english-subheading"
+                }`}
+              >
                 {t("monetizationTitle")}
               </h4>
               <p className={`${isRTL ? "font-arabic" : "font-english"}`}>

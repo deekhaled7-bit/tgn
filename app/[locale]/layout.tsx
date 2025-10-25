@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isRTL = locale === "ar";
 
   return {
-    title: "The Good News - Modern News & Blogging Platform",
+    title: "THE GOOD NEWS",
     description: "Discover stories that matter, insights that inspire",
     other: {
       dir: isRTL ? "rtl" : "ltr",

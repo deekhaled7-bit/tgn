@@ -97,7 +97,7 @@ const Testimonials = () => {
         </div>
         <img
           src="/mounir/TGN_ELEMENTS_PNG-08.png"
-          alt="The Good News"
+          alt="THE GOOD NEWS"
           className="w-64 h-64 object-contain "
         />
         <div className="flex items-center gap-2 mb-2">

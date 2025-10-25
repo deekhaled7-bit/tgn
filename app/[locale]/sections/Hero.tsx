@@ -120,7 +120,7 @@ const Hero = () => {
               alt="Digital Experience"
               width={600}
               height={600}
-              className="object-contain w-[1000px] h-[800px] md:w-[600px] md:h-[600px] "
+              className="object-contain w-[1000px] h-[800px] md:w-[800px] md:h-[600px] "
             />
 
             {/* Growth percentage */}

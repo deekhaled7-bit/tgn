@@ -68,7 +68,7 @@ export function FeaturesSection() {
             {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Discover what makes The Good News the perfect platform for modern
+            Discover what makes THE GOOD NEWS the perfect platform for modern
             readers who want quality content and meaningful connections.
           </p>
         </div>
@@ -119,7 +119,7 @@ export function FeaturesSection() {
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-hot-pink/10 to-bright-yellow/10 border border-hot-pink/20">
             <Heart className="w-5 h-5 text-hot-pink mr-2 rtl:mr-0 rtl:ml-2" />
             <span className="text-foreground font-medium">
-              Join 50,000+ readers who love The Good News
+              Join 50,000+ readers who love THE GOOD NEWS
             </span>
           </div>
         </div>

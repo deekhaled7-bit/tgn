@@ -62,7 +62,7 @@ export function Footer() {
           className="grid grid-cols-1 items-start justify-center md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {/* Brand Section */}
-          <div dir="" className="space-y-4">
+          <div dir={isRTL ? "rtl" : "ltr"} className="space-y-4">
             <Link
               href={`/${locale}`}
               className="flex items-center justify-center space-x-2 rtl:space-x-reverse"
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div dir={isRTL ? "rtl" : "ltr"} className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">
               {t("quickLinks.title")}
             </h3>
@@ -116,7 +116,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
+          <div dir={isRTL ? "rtl" : "ltr"} className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">
               {t("contact.title")}
             </h3>
@@ -137,7 +137,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="space-y-4">
+          <div dir={isRTL ? "rtl" : "ltr"} className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">
               {t("newsletter.title")}
             </h3>
@@ -160,7 +160,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border">
+        <div
+          dir={isRTL ? "rtl" : "ltr"}
+          className="mt-12 pt-8 border-t border-border"
+        >
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-sm text-muted-foreground">
               {t("bottom.copyright", { year: currentYear })}

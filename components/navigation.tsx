@@ -192,18 +192,23 @@ export function Navigation({
       items: [
         { href: `/${locale}/about/story`, label: t("aboutSubItems.ourStory") },
         { href: `/${locale}/about/team`, label: t("aboutSubItems.team") },
+        {
+          href: `/${locale}/about/partners`,
+          label: t("aboutSubItems.partners"),
+        },
         // {
         //   href: `/${locale}/about/partners`,
         //   label: t("aboutSubItems.partners"),
         // },
-        // {
-        //   href: `/${locale}/about/media`,
-        //   label: t("aboutSubItems.mediaPresence"),
-        // },
+        {
+          href: `/${locale}/about/media`,
+          label: t("aboutSubItems.mediaPresence"),
+        },
       ],
     },
     {
-      label: t("contact"),
+      // label: t("contact"),
+      label: t("involved"),
       type: "dropdown",
       items: [
         { href: `/${locale}/contact`, label: t("contact") },
@@ -211,6 +216,14 @@ export function Navigation({
         {
           href: `/${locale}/contact/share-news`,
           label: t("contactSubItems.shareGoodNews"),
+        },
+        {
+          href: `/${locale}/contact/partner`,
+          label: t("contactSubItems.beOurPartner"),
+        },
+        {
+          href: `/${locale}/#newsletter`,
+          label: t("newsletter"),
         },
       ],
     },
@@ -224,11 +237,11 @@ export function Navigation({
     //     },
     //   ],
     // },
-    {
-      href: `/${locale}/mediaPresence`,
-      label: t("mediaPresence"),
-      type: "link",
-    },
+    // {
+    //   href: `/${locale}/mediaPresence`,
+    //   label: t("mediaPresence"),
+    //   type: "link",
+    // },
     {
       href: `/${locale}/workshops`,
       label: t("opportunitiesSubItems.workshops"),
@@ -240,21 +253,11 @@ export function Navigation({
       label: t("opportunitiesSubItems.theGoodIntern"),
       type: "link",
     },
-    {
-      label: t("aboutSubItems.partners"),
-      type: "dropdown",
-      items: [
-        {
-          href: `/${locale}/about/partners`,
-          label: t("aboutSubItems.partners"),
-        },
-
-        {
-          href: `/${locale}/contact/partner`,
-          label: t("contactSubItems.beOurPartner"),
-        },
-      ],
-    },
+    // {
+    //   label: t("aboutSubItems.partners"),
+    //   type: "dropdown",
+    //   items: [],
+    // },
   ];
 
   return (
