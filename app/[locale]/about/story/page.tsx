@@ -18,6 +18,8 @@ const Counter = ({ end, duration = 2000, className }: CounterProps) => {
   const [count, setCount] = useState(0);
   const countRef = useRef<HTMLSpanElement | null>(null);
   const [inView, setInView] = useState(false);
+  const locale = useLocale();
+  const isRTL = locale === "ar";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -78,9 +80,14 @@ const Counter = ({ end, duration = 2000, className }: CounterProps) => {
     count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
     (end.includes("+") ? "+" : "");
 
+  // Convert to Arabic numerals if in RTL mode
+  const displayCount = isRTL
+    ? formattedCount.replace(/[0-9]/g, (d) => "٠١٢٣٤٥٦٧٨٩"[parseInt(d)])
+    : formattedCount;
+
   return (
     <span ref={countRef} className={className}>
-      {formattedCount}
+      {displayCount}
     </span>
   );
 };
@@ -92,7 +99,7 @@ export default function StoryPage() {
 
   return (
     <div
-      className={`px-4  sm:px-6 md:px-10 lg:px-16 pb-12 md:pb-16 pt-20 md:pt-28 ${
+      className={` pb-12 md:pb-16 pt-20 md:pt-28 ${
         isRTL ? "text-right" : "text-left"
       }`}
     >
@@ -129,14 +136,15 @@ export default function StoryPage() {
                   className="object-contain rounded-lg"
                   priority
                 />
+                <div className="absolute top-[90%] -right-[145%] sm:top-1/3 sm:left-[140%] md:top-1/4 md:left-[140%] -translate-x-1/2 -translate-y-1/2">
+                  <WhoWeAreChatBubble
+                    text={t("content1")}
+                    direction={"left"}
+                    index={0}
+                  />
+                </div>
               </div>
-              <div className="absolute top-[90%] left-3/4 sm:top-1/3 sm:left-2/3 md:top-1/4 md:left-3/4 -translate-x-1/2 -translate-y-1/2">
-                <WhoWeAreChatBubble
-                  text={t("content1")}
-                  direction={"left"}
-                  index={0}
-                />
-              </div>
+              <div></div>
             </motion.div>
           </div>
           <div>
@@ -148,12 +156,14 @@ export default function StoryPage() {
             >
               {t("whoIsMariam")}
             </h2>
-            <div className="flex mb-14 flex-col md:flex-row items-center gap-6">
+            <div className="flex mb-14 px-4 sm:px-6 md:px-16 lg:px-16 flex-col md:flex-row items-center gap-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                className="w-full md:w-1/3 flex justify-center"
+                className={`w-full md:w-1/3 flex justify-center ${
+                  isRTL ? "md:order-last" : "md:order-first"
+                }`}
               >
                 <Image
                   src="/pictures/TGN_Profilepicture2.png"
@@ -164,11 +174,12 @@ export default function StoryPage() {
                 />
               </motion.div>
               <motion.p
+                dir={isRTL ? "rtl" : "ltr"}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className={`${
-                  isRTL ? "font-arabic" : "font-english"
+                  isRTL ? "font-arabic text-right" : "font-english text-left"
                 } mt-6 md:mt-0 md:w-2/3`}
               >
                 {t("content2")}
@@ -181,7 +192,7 @@ export default function StoryPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 mb-10  pt-12 border-y border-gray-200"
+          className="mt-16 mb-10 px-4  sm:px-6 md:px-10 lg:px-16 pt-12 border-y border-gray-200"
         >
           <h2
             className={`text-4xl md:text-5xl font-bold ${
@@ -192,10 +203,15 @@ export default function StoryPage() {
           </h2>
 
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-            <div className={`w-full md:w-1/2 `}>
+            <div
+              className={`w-full md:w-1/2 ${
+                isRTL ? "md:order-last" : "md:order-first"
+              }`}
+            >
               <p
+                dir={isRTL ? "rtl" : "ltr"}
                 className={`text-lg ${
-                  isRTL ? "font-arabic" : "font-english"
+                  isRTL ? "font-arabic text-right" : "font-english text-left"
                 } text-center md:text-left ${isRTL ? "md:text-right" : ""}`}
               >
                 {t("missionContent")}
@@ -206,8 +222,8 @@ export default function StoryPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className={`w-full md:w-1/2 flex justify-center ${
-                isRTL ? "md:order-1" : "md:order-2"
+              className={`w-full md:pb-8 md:w-1/2 flex justify-center ${
+                isRTL ? "md:order-first" : "md:order-last"
               }`}
             >
               <Image
@@ -221,7 +237,7 @@ export default function StoryPage() {
             </motion.div>
           </div>
         </motion.div>
-        <div className="mb-36 border-gray-200 border-b pb-10">
+        <div className="mb-36 px-4  sm:px-6 md:px-10 lg:px-16 border-gray-200 border-b pb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -269,7 +285,7 @@ export default function StoryPage() {
                   isRTL ? "font-arabic-header" : "font-english-heading"
                 }`}
               >
-                <Counter end="2,000" duration={2000} />
+                <Counter end="2,000+" duration={2000} />
               </h3>
               <p
                 className={`text-lg text-center text-white ${
@@ -292,7 +308,7 @@ export default function StoryPage() {
                   isRTL ? "font-arabic-header" : "font-english-heading"
                 }`}
               >
-                <Counter end="20,000" duration={2200} />
+                <Counter end="20,000+" duration={2200} />
               </h3>
               <p
                 className={`text-lg text-center text-white ${
@@ -312,15 +328,15 @@ export default function StoryPage() {
             className="mt-8 text-center"
           >
             <p
-              className={`text-2xl font-semibold text-pink-500 italic ${
+              className={`text-2xl md:text-3xl font-semibold text-pink-500 italic ${
                 isRTL ? "font-arabic" : "font-english"
               }`}
             >
-              &quot;{t("impact.hearts")}&quot;
+              {t("impact.hearts")}
             </p>
           </motion.div>
         </div>
-        <div className="mb-20">
+        <div className="mb-20 px-4  sm:px-6 md:px-10 lg:px-16">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

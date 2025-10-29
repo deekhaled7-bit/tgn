@@ -19,7 +19,7 @@ const Quote = () => {
     >
       <div
         dir={isRTL ? "rtl" : "ltr"}
-        className="xl:max-w-4xl 2xl:max-w-6xl mx-auto text-center"
+        className="max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-[860px] 2xl:max-w-6xl mx-auto text-center"
       >
         <motion.blockquote
           ref={ref}
@@ -27,8 +27,10 @@ const Quote = () => {
           animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
           transition={{ duration: 1.2 }}
           style={{ lineHeight: "1.5em" }}
-          className={`text-2xl md:text-3xl lg:text-4xl font-bold text-cream tracking-wide ${
-            isRTL ? "font-arabic-header" : "font-english-heading"
+          className={` font-bold text-cream tracking-wide ${
+            isRTL
+              ? "font-arabic-header text-3xl md:text-4xl lg:text-5xl"
+              : "font-english-heading text-2xl md:text-3xl lg:text-4xl"
           }`}
         >
           {t("inspirational")}

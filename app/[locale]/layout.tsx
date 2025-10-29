@@ -60,7 +60,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <NextIntlClientProvider messages={messages}>
         <Navigation isLoggedIn={isLoggedIn} userRole={userRole} />
-        {children}
+        <div className="overflow-x-hidden">{children}</div>
         <Footer />
       </NextIntlClientProvider>
     </ThemeProvider>

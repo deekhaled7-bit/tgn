@@ -206,27 +206,7 @@ export function Navigation({
         },
       ],
     },
-    {
-      // label: t("contact"),
-      label: t("involved"),
-      type: "dropdown",
-      items: [
-        { href: `/${locale}/contact`, label: t("contact") },
 
-        {
-          href: `/${locale}/contact/share-news`,
-          label: t("contactSubItems.shareGoodNews"),
-        },
-        {
-          href: `/${locale}/contact/partner`,
-          label: t("contactSubItems.beOurPartner"),
-        },
-        {
-          href: `/${locale}/#newsletter`,
-          label: t("newsletter"),
-        },
-      ],
-    },
     // {
     //   label: t("multimedia"),
     //   type: "dropdown",
@@ -252,6 +232,27 @@ export function Navigation({
       href: `/${locale}/goodIntern`,
       label: t("opportunitiesSubItems.theGoodIntern"),
       type: "link",
+    },
+    {
+      // label: t("contact"),
+      label: t("involved"),
+      type: "dropdown",
+      items: [
+        { href: `/${locale}/contact`, label: t("contact") },
+
+        {
+          href: `/${locale}/contact/share-news`,
+          label: t("contactSubItems.shareGoodNews"),
+        },
+        {
+          href: `/${locale}/contact/partner`,
+          label: t("contactSubItems.beOurPartner"),
+        },
+        {
+          href: `/${locale}/#newsletter`,
+          label: t("newsletter"),
+        },
+      ],
     },
     // {
     //   label: t("aboutSubItems.partners"),
