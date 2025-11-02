@@ -1,62 +1,94 @@
-import { NextRequest, NextResponse } from 'next/server';
-import bcrypt from 'bcryptjs';
-import clientPromise from '@/lib/mongodb';
+import { ConnectDB } from "@/app/config/db";
+import verificationsModel from "@/app/modals/sessionModel";
+import sessionsModel from "@/app/modals/sessionModel";
+import UserModel from "@/app/modals/userModel";
+import { sendMail } from "@/lib/email";
+import { User } from "@/models/User";
+import { SubscriprtionMail } from "@/utils/subscriptionMail";
+import { verificationEmailTemplate } from "@/utils/verificationEmailTempelate";
+import { hash } from "bcryptjs";
 
-export async function POST(request: NextRequest) {
+export async function POST(req: Request) {
   try {
-    const { name, email, password } = await request.json();
+    const { username, email, password } = await req.json();
+    console.log("here" + username, email, password);
 
-    if (!name || !email || !password) {
-      return NextResponse.json(
-        { error: 'All fields are required' },
+    // Validate required fields
+    if (!username || !email || !password) {
+      return new Response(
+        JSON.stringify({ error: "All fields are required" }),
         { status: 400 }
       );
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return new Response(JSON.stringify({ error: "Invalid email format" }), {
+        status: 400,
+      });
+    }
+
+    // Validate password length
     if (password.length < 6) {
-      return NextResponse.json(
-        { error: 'Password must be at least 6 characters' },
+      return new Response(
+        JSON.stringify({ error: "Password must be at least 6 characters" }),
         { status: 400 }
       );
     }
 
-    const client = await clientPromise;
-    const users = client.db('thegoodnews').collection('users');
+    await ConnectDB();
 
     // Check if user already exists
-    const existingUser = await users.findOne({ 
-      email: email.toLowerCase() 
-    });
+    const existingUser = await UserModel.findOne({ email: email });
 
     if (existingUser) {
-      return NextResponse.json(
-        { error: 'User already exists' },
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ error: "Email already used" }), {
+        status: 400,
+      });
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12);
+    const hashedPassword = await hash(password, 10);
+    console.log(username, email, hashedPassword);
 
-    // Create user
-    const result = await users.insertOne({
-      name,
-      email: email.toLowerCase(),
+    const user = await UserModel.create({
+      username: username,
+      email: email,
       password: hashedPassword,
-      role: 'user',
-      createdAt: new Date(),
-      updatedAt: new Date(),
     });
 
-    return NextResponse.json(
-      { message: 'User created successfully', userId: result.insertedId },
+    // Remove password from response
+    const userResponse = {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      createdAt: user.createdAt,
+    };
+    await verificationsModel.create({ userID: userResponse.id });
+    console.log("here" + userResponse.id);
+    //    const token = await bcrypt.hash(savedUser._id.toString(), saltRounds);
+    const verificationLink = `${process.env.baseUrl}api/auth/verification/${userResponse.id}`;
+    await sendMail({
+      to: email,
+      name: "wiiga",
+      subject: "Please click on link to verify your account",
+      body: `${SubscriprtionMail(verificationLink)}`,
+      from: "authintication@shopwifeyforlifey.com",
+      // body: `<a href=${verificationLink}> click here to verify your account</a>`,
+      //   body: compileWelcomeTemplate("Vahid", "youtube.com/@sakuradev"),
+    });
+
+    return new Response(
+      JSON.stringify({
+        message: "User created successfully",
+        user: userResponse,
+      }),
       { status: 201 }
     );
-  } catch (error) {
-    console.error('Registration error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+  } catch (err) {
+    console.error("Registration error:", err);
+    return new Response(JSON.stringify({ error: "Internal server error" }), {
+      status: 500,
+    });
   }
 }
