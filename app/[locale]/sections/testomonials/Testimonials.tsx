@@ -69,7 +69,7 @@ const Testimonials = () => {
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full flex min-h-[75vh] md:min-h-[100vh] h-auto flex-col items-center md:justify-center justify-end py-16 bg-cream ${
+      className={`relative  w-full max-w-6xl flex min-h-[75vh] md:min-h-[100vh] h-auto flex-col items-center md:justify-center justify-end py-16 bg-cream ${
         isRTL ? "text-right" : "text-left"
       }`}
     >

@@ -13,7 +13,7 @@ const Quote = () => {
 
   return (
     <div
-      className={`flex items-center bg-hot-pink justify-center md:py-16 py-10 p-8 ${
+      className={`flex items-center bg-hot-pink justify-center w-full md:py-16 py-10 p-8 ${
         isRTL ? "text-right" : "text-left"
       }`}
     >

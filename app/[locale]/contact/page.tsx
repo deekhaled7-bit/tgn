@@ -31,7 +31,7 @@ export default function ContactPage() {
           </div>
           <div
             className={`text-2xl md:text-3xl font-bold mt-3 ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
+              isRTL ? "font-arabic-subheading" : "font-english-body"
             } text-carbon`}
           >
             {t("subtitle")}

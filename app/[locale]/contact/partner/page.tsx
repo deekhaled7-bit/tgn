@@ -46,7 +46,7 @@ export default function PartnerPage() {
           </div>
           <div
             className={`text-2xl md:text-3xl font-bold mt-3 ${
-              isRTL ? "font-arabic-subheading" : "font-english-subheading"
+              isRTL ? "font-arabic-subheading" : "font-english-body"
             } text-carbon`}
           >
             {t("subtitle")}
@@ -91,7 +91,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="text"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -110,7 +112,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="text"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -128,7 +132,9 @@ export default function PartnerPage() {
               <span className="text-hot-pink">*</span>
             </label>
             <textarea
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink h-32 ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink h-32 ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -144,9 +150,17 @@ export default function PartnerPage() {
             >
               {t("form.campaignDetails")}
             </label>
-            <p className={`text-sm text-gray-500 mb-2 ${isRTL ? "text-right" : "text-left"}`}>{t("form.campaignDetailsHint")}</p>
+            <p
+              className={`text-sm text-gray-500 mb-2 ${
+                isRTL ? "text-right" : "text-left"
+              }`}
+            >
+              {t("form.campaignDetailsHint")}
+            </p>
             <textarea
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink h-32 ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink h-32 ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
             ></textarea>
@@ -164,7 +178,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="text"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -183,7 +199,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="text"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -202,7 +220,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="tel"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}
@@ -221,7 +241,9 @@ export default function PartnerPage() {
             </label>
             <input
               type="email"
-              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${isRTL ? "text-right" : "text-left"}`}
+              className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-hot-pink ${
+                isRTL ? "text-right" : "text-left"
+              }`}
               required
               placeholder={t("form.placeholder")}
               dir={isRTL ? "rtl" : "ltr"}

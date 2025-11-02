@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-cream overflow-hidden">
       {/* <Navigation isLoggedIn={isLoggedIn} userRole={userRole} /> */}
-      <main className="">
+      <main className="w-full flex flex-col items-center">
         {/* <Hero /> */}
         <HeroGif />
         <Quote />
