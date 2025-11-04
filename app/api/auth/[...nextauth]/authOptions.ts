@@ -5,8 +5,6 @@ import { ConnectDB } from "@/app/config/db";
 import { compare } from "bcryptjs";
 import UserModel from "@/app/modals/userModel";
 import subscriptionsModel from "@/app/modals/subscriptionsModel";
-import { LoyaltyTransactionModel } from "@/app/modals/loyaltyTransactionModel";
-import { LoyaltyPointsModel } from "@/app/modals/rewardModel";
 import { v4 as uuidv4 } from "uuid";
 import SessionModel from "@/app/modals/sessionsModel";
 import { Types } from "mongoose"; // For ObjectId
@@ -213,12 +211,13 @@ export const authOptions: NextAuthOptions = {
     async session({ session, token }) {
       if (token.sub && session.user) {
         session.user.id = token.sub;
-        
+
         // Fetch user data to get firstName and lastName
         try {
           const userData = await UserModel.findById(token.sub);
           if (userData) {
-            session.user.firstName = userData.firstName || userData.username || "";
+            session.user.firstName =
+              userData.firstName || userData.username || "";
             session.user.lastName = userData.lastName || "";
           }
         } catch (error) {

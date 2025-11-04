@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       osVersion: data.osVersion,
       fingerprint: data.fingerprint,
     });
-    const user = await UserModel.findById(data.userId).select('firstName -_id');
+    const user = await UserModel.findById(data.userId).select("firstName -_id");
     // Check for suspicious login activity if login was successful and we have userId and fingerprint
     let suspiciousActivityDetected = false;
     if (data.success !== false && data.userId && data.fingerprint) {

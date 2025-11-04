@@ -25,7 +25,7 @@ export interface IBlog extends Document {
 }
 
 // Define the Blog schema
-const BlogSchema = new Schema<IBlog>(
+const BlogSchema = new Schema(
   {
     title: {
       type: String,

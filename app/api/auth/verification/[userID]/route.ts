@@ -4,9 +4,8 @@ import verificationsModel from "@/app/modals/sessionModel";
 import subscriptionsModel from "@/app/modals/subscriptionsModel";
 import { ConnectDB } from "@/app/config/db";
 
-
 export async function GET(_request: NextRequest) {
-await ConnectDB();
+  await ConnectDB();
 
   try {
     // Extract userID from the URL using nextUrl.pathname

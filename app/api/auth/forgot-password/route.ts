@@ -3,8 +3,8 @@ import UserModel from "@/app/modals/userModel";
 import PasswordResetToken from "@/models/PasswordResetToken";
 import crypto from "crypto";
 import { sendMail } from "@/lib/email";
-import { ConnectDB } from "@/app/config/db";
 import { resetPasswordEmailTemplate } from "@/utils/resetPasswordEmail";
+import { ConnectDB } from "@/app/config/db";
 
 export async function POST(req: Request) {
   await ConnectDB();

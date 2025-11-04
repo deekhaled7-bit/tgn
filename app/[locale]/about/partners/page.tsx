@@ -83,12 +83,12 @@ const MediaRenderer = ({ media }: { media: MediaItem }) => {
   return (
     <>
       {media.type === "image" ? (
-        <div className="relative h-64 w-full  rounded-md overflow-hidden">
+        <div className="relative h-96 w-full  rounded-md overflow-hidden">
           <Image
             src={media.src}
             alt={media.caption || "Case study image"}
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
@@ -452,7 +452,7 @@ export default function PartnersPage() {
       mediaItems: [
         {
           type: "image",
-          src: "/partners/case studies/ministry-case-1.jpg",
+          src: "/partners/case studies/case11.jpeg",
           caption: "Collaboration post with H.E. Dr. Ashraf Sobhy",
         },
         {
@@ -512,7 +512,7 @@ export default function PartnersPage() {
       mediaItems: [
         {
           type: "image",
-          src: "/partners/case studies/Screenshot 2025-10-14 145406.png",
+          src: "/partners/case studies/case12.jpeg",
           caption: "Community development program in action",
         },
       ],

@@ -2,8 +2,7 @@ import NextAuth from "next-auth";
 import { authOptions } from "./authOptions";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { ConnectDB } from "@/app/config/db";
-import { User } from "@/models/User";
+
 import { compare } from "bcryptjs";
 import UserModel from "@/app/modals/userModel";
 

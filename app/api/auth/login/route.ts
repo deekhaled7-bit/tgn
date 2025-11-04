@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
-import UserModel from '@/app/modals/userModel';
-import { ConnectDB } from '@/app/config/db';
-import { generateToken } from '@/utils/auth';
+import { NextResponse } from "next/server";
+import UserModel from "@/app/modals/userModel";
+import { ConnectDB } from "@/app/config/db";
+import { generateToken } from "@/utils/auth";
 
 export async function POST(request: Request) {
   try {
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     const user = await UserModel.findOne({ username });
     if (!user) {
       return NextResponse.json(
-        { error: 'Invalid username or password' },
+        { error: "Invalid username or password" },
         { status: 401 }
       );
     }
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const isValid = await user.comparePassword(password);
     if (!isValid) {
       return NextResponse.json(
-        { error: 'Invalid username or password' },
+        { error: "Invalid username or password" },
         { status: 401 }
       );
     }
@@ -32,27 +32,27 @@ export async function POST(request: Request) {
 
     // Create response
     const response = NextResponse.json(
-      { message: 'Login successful' },
+      { message: "Login successful" },
       { status: 200 }
     );
 
     // Set token in cookie with proper configuration
     response.cookies.set({
-      name: 'token',
+      name: "token",
       value: token,
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      path: '/',
-      maxAge: 30 * 60 // 30 minutes
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 30 * 60, // 30 minutes
     });
 
     return response;
   } catch (error) {
-    console.error('Login error:', error);
+    console.error("Login error:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
-} 
+}
